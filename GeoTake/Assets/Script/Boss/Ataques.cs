@@ -8,19 +8,25 @@ public class Ataques : MonoBehaviour
     public GameObject obs;
     public GameObject movim1;
     public GameObject movim2;
-       private int contador;
-           void Start()
+    private int contador;
+
+    public MonoBehaviour movimentacaoCerta; 
+    public MonoBehaviour movimentacaoInvertida; 
+    void Start()
     {
-      
-        
+         movimentacaoCerta = movim1.GetComponent<MovimentacaoPlayers>();
+         movimentacaoInvertida = movim2.GetComponent<MovimentoInvertido>();
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        contador += Mathf.CeilToInt(Time.deltaTime * 1);
+        
+         contador += Mathf.CeilToInt(Time.deltaTime * 1);
         Debug.Log(contador);
-        if(contador ==1500){
+        if(contador ==1000){
                Debug.Log("Terreno Ativado");
 
                
@@ -36,20 +42,38 @@ public class Ataques : MonoBehaviour
                
         
         }
-        if(contador ==4500){
-               Debug.Log("Terreno Ativado");
+        if(contador ==3500){
+               Debug.Log("Familia Ativado");
             
                  obs2.SetActive(true);
                
            
         }
-            if(contador ==6000){
-                Debug.Log("Terreno Desativado");
+            if(contador ==7000){
+                Debug.Log("familia Desativado");
            
                  obs2.SetActive(false);
                
-                contador = 0;
-                Time.timeScale = 1;
+               
         }
+        if (contador == 7500)
+        {
+            Debug.Log("inverte Ativado");
+            movimentacaoCerta.enabled = false;
+            movimentacaoInvertida.enabled = true;
+
+
+        }
+        if (contador == 13500)
+        {
+            Debug.Log("inverte Desativado");
+
+            movimentacaoCerta.enabled = true;
+            movimentacaoInvertida.enabled = false;
+            contador = 0;
+            Time.timeScale = 1;
+
+        }
+
     }
 }
