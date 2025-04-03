@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9509,56 +9509,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1194552632
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1194552633}
-  - component: {fileID: 1194552634}
-  m_Layer: 0
-  m_Name: GamerController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1194552633
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1194552632}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.038596, y: -0.12642543, z: -5.4511433}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1194552634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1194552632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a1a37cf416d9cb4bafc705c70a551d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obs2: {fileID: 0}
-  obs: {fileID: 835091392}
-  movim1: {fileID: 0}
-  movim2: {fileID: 0}
-  movimentacaoCerta: {fileID: 0}
-  movimentacaoInvertida: {fileID: 0}
 --- !u!1001 &1195955121
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15030,7 +14980,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1967904978}
   - component: {fileID: 1967904977}
-  - component: {fileID: 1967904976}
   - component: {fileID: 1967904979}
   m_Layer: 0
   m_Name: GameController
@@ -15039,22 +14988,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1967904976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967904975}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 460e2c5f078f5074d9b7537e11ec6700, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inimigo1: {fileID: 0}
-  inimigo2: {fileID: 0}
-  inimigo3: {fileID: 0}
-  inimigo4: {fileID: 0}
 --- !u!114 &1967904977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15107,6 +15040,7 @@ MonoBehaviour:
   obs: {fileID: 835091392}
   movim1: {fileID: 1038794309}
   movim2: {fileID: 1038794309}
+  random: 0
   movimentacaoCerta: {fileID: 0}
   movimentacaoInvertida: {fileID: 0}
 --- !u!1 &1998423049
@@ -15916,7 +15850,6 @@ SceneRoots:
   - {fileID: 79626578}
   - {fileID: 737781603}
   - {fileID: 719587667}
-  - {fileID: 1194552633}
   - {fileID: 1038794317}
   - {fileID: 835091393}
   - {fileID: 1043794974}

@@ -9,7 +9,8 @@ public class Ataques : MonoBehaviour
     public GameObject movim1;
     public GameObject movim2;
     private int contador;
-
+    
+    public int random = 0;
     public MonoBehaviour movimentacaoCerta; 
     public MonoBehaviour movimentacaoInvertida; 
     void Start()
@@ -25,55 +26,94 @@ public class Ataques : MonoBehaviour
     {
         
          contador += Mathf.CeilToInt(Time.deltaTime * 1);
-        Debug.Log(contador);
-        if(contador ==1000){
-               Debug.Log("Terreno Ativado");
+       
+        if(contador ==300){
+            random = Random.Range(1,6);
+               Debug.Log("Opcão " + random);
+}
+        if(random ==1){
+               Debug.Log("Opcão " + random);
+            Opcao1();
+                 }
 
-               
-                 obs.SetActive(true);
-               
-            
-           
-        }
-        if(contador ==3000){
-               Debug.Log("Terreno Desativado");
-            
-                 obs.SetActive(false);
-               
-        
-        }
-        if(contador ==3500){
-               Debug.Log("Familia Ativado");
-            
-                 obs2.SetActive(true);
-               
-           
-        }
-            if(contador ==7000){
-                Debug.Log("familia Desativado");
-           
-                 obs2.SetActive(false);
-               
-               
-        }
-        if (contador == 7500)
-        {
-            Debug.Log("inverte Ativado");
-            movimentacaoCerta.enabled = false;
-            movimentacaoInvertida.enabled = true;
+        if(random ==2){
+               Debug.Log("Opcão " + random);
+            Opcao2();
+                 }
 
+        if(random ==3){
+               Debug.Log("Opcão " + random);
+            Opcao3();
+                 }
 
-        }
-        if (contador == 13500)
-        {
-            Debug.Log("inverte Desativado");
+        if(random ==4){
+               Debug.Log("Opcão " + random);
+            Opcao4();
+                 }
 
-            movimentacaoCerta.enabled = true;
-            movimentacaoInvertida.enabled = false;
-            contador = 0;
-            Time.timeScale = 1;
-
-        }
-
+        if(random ==5){
+               Debug.Log("Opcão " + random);
+            Opcao5();
+                 }
+    
+}
+public void Opcao1(){
+    obs2.SetActive(true);
+    if(contador == 600){
+        obs2.SetActive(false);
+        contador =0;
+        Time.timeScale = 1;
+        random = 0;
     }
+}
+
+public void Opcao2(){
+    obs2.SetActive(true);
+    obs.SetActive(true);
+    if(contador == 600){
+        obs2.SetActive(false);
+        obs.SetActive(false);
+        contador =0;
+        Time.timeScale = 1;
+        random = 0;
+    }
+}
+
+public void Opcao3(){
+    obs2.SetActive(true);
+    movimentacaoCerta.enabled = false;
+    movimentacaoInvertida.enabled = true;
+    if(contador == 600){
+        obs2.SetActive(false);
+    movimentacaoCerta.enabled = true;
+    movimentacaoInvertida.enabled = false;
+        contador =0;
+        Time.timeScale = 1;
+        random = 0;
+    }
+}
+
+public void Opcao4(){
+     movimentacaoCerta.enabled = false;
+    movimentacaoInvertida.enabled = true;
+    obs.SetActive(true);
+    if(contador == 600){
+        movimentacaoCerta.enabled = true;
+    movimentacaoInvertida.enabled = false;
+    obs.SetActive(false);
+        contador =0;
+        Time.timeScale = 1;
+        random = 0;
+    }
+}
+
+public void Opcao5(){
+    obs.SetActive(true);
+    if(contador == 600){
+        obs.SetActive(false);
+        contador =0;
+        Time.timeScale = 1;
+        random = 0;
+    }
+}
 }
