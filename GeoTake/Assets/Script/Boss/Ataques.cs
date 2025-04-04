@@ -9,8 +9,8 @@ public class Ataques : MonoBehaviour
     public GameObject movim1;
     public GameObject movim2;
     private int contador;
-    
-    public int random = 0;
+    public GameObject nuvem;
+    private int random = 0;
     public MonoBehaviour movimentacaoCerta; 
     public MonoBehaviour movimentacaoInvertida; 
     void Start()
@@ -25,7 +25,7 @@ public class Ataques : MonoBehaviour
     void Update()
     {
         
-         contador += Mathf.CeilToInt(Time.deltaTime * 1);
+         contador += Mathf.CeilToInt(Time.deltaTime );
        
         if(contador ==300){
             random = Random.Range(1,6);
@@ -59,7 +59,9 @@ public class Ataques : MonoBehaviour
 }
 public void Opcao1(){
     obs2.SetActive(true);
+    nuvem.SetActive(true);
     if(contador == 600){
+        nuvem.SetActive(false);
         obs2.SetActive(false);
         contador =0;
         Time.timeScale = 1;
@@ -109,7 +111,9 @@ public void Opcao4(){
 
 public void Opcao5(){
     obs.SetActive(true);
+    nuvem.SetActive(true);
     if(contador == 600){
+        nuvem.SetActive(false);
         obs.SetActive(false);
         contador =0;
         Time.timeScale = 1;
