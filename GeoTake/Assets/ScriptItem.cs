@@ -1,36 +1,53 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+
 
 public class ScriptItem : MonoBehaviour
 {
-    public Transform jogador; // ReferÍncia ao Transform do jogador
-    public float distanciaSeguranca = 5f; // Dist‚ncia mÌnima do jogador
-    public float velocidade = 2f; // Velocidade de afastamento
-
-    public Transform jogador; // ReferÍncia ao Transform do jogador
-    public float distanciaSeguranca = 5f; // Dist‚ncia mÌnima do jogador
-    private NavMeshAgent agente; // Componente NavMeshAgent
+    public Transform jogador; // Refer√™ncia ao Transform do jogador
+    public float distanciaSeguranca = 5f; // Dist√¢ncia m√≠nima do jogador
+    public float distanciaMaxima = 10f; // Dist√¢ncia m√°xima que o objeto pode se afastar
+    public NavMeshAgent agente; // Componente NavMeshAgent
 
     void Start()
     {
-        agente = GetComponent<NavMeshAgent>(); // ObtÈm o componente NavMeshAgent
+        agente = GetComponent<NavMeshAgent>(); // Obt√©m o componente NavMeshAgent
+
+        if (agente == null)
+        {
+            Debug.LogError("NavMeshAgent n√£o encontrado no objeto " + gameObject.name);
+        }
     }
 
     void Update()
     {
-        // Verifica a dist‚ncia entre o objeto e o jogador
+        if (agente == null) return;
+        // Verifica a dist√¢ncia entre o objeto e o jogador
         float distancia = Vector3.Distance(transform.position, jogador.position);
 
-        // Se o jogador estiver mais perto do que a dist‚ncia de seguranÁa
+        // Se o jogador estiver mais perto do que a dist√¢ncia de seguran√ßa
         if (distancia < distanciaSeguranca)
         {
-            // Calcula a direÁ„o oposta ao jogador
+            // Calcula a dire√ß√£o oposta ao jogador
             Vector3 direcao = (transform.position - jogador.position).normalized;
 
             // Define o novo destino para o agente
-            Vector3 novoDestino = transform.position + direcao * distanciaSeguranca;
-            agente.SetDestination(novoDestino);
+            Vector3 novoDestino = transform.position + direcao * distanciaMaxima;
+
+            // Verifica se o novo destino est√° dentro do NavMesh
+            NavMeshHit hit;
+            if (NavMesh.SamplePosition(novoDestino, out hit, 1.0f, NavMesh.AllAreas))
+            {
+                // Define o destino do agente
+                agente.SetDestination(hit.position);
+            }
+        }
+        else
+        {
+            // Para o agente se o jogador estiver longe o suficiente
+            agente.ResetPath();
         }
     }
 }
