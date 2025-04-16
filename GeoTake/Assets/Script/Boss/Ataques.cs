@@ -27,7 +27,7 @@ public class Ataques : MonoBehaviour
         
          contador += Mathf.CeilToInt(Time.deltaTime );
        
-        if(contador ==700){
+        if(contador ==3000){
             random = Random.Range(1,6);
                Debug.Log("Opcão " + random);
 }
@@ -60,7 +60,7 @@ public class Ataques : MonoBehaviour
 public void Opcao1(){
     obs2.SetActive(true);
         nuvem.SetActive(true);
-        if (contador == 2000){
+        if (contador == 5000){
             nuvem.SetActive(false);
             obs2.SetActive(false);
         contador =0;
@@ -73,7 +73,7 @@ public void Opcao2(){
         nuvem.SetActive(true);
         obs2.SetActive(true);
     obs.SetActive(true);
-    if(contador == 2000){
+    if(contador == 5000){
         obs2.SetActive(false);
         obs.SetActive(false);
             nuvem.SetActive(false);
@@ -87,7 +87,7 @@ public void Opcao3(){
     obs2.SetActive(true);
    movimentacaoCerta.enabled = false;
         movimentacaoInvertida.enabled = true;
-    if(contador == 2000){
+    if(contador == 5000){
         obs2.SetActive(false);
             movimentacaoCerta.enabled = true;
             movimentacaoInvertida.enabled = false;
@@ -102,7 +102,7 @@ public void Opcao4(){
     obs.SetActive(true);
         movimentacaoCerta.enabled = false;
         movimentacaoInvertida.enabled = true;
-        if (contador == 2000){
+        if (contador == 5000){
             movimentacaoCerta.enabled = true;
             movimentacaoInvertida.enabled = false;
             obs.SetActive(false);
@@ -116,7 +116,7 @@ public void Opcao5(){
     obs.SetActive(true);
     nuvem.SetActive(true);
    
-    if(contador == 2000){
+    if(contador == 5000){
        
         nuvem.SetActive(false);
         obs.SetActive(false);
