@@ -27,7 +27,7 @@ public class Ataques : MonoBehaviour
         
          contador += Mathf.CeilToInt(Time.deltaTime );
        
-        if(contador ==300){
+        if(contador ==700){
             random = Random.Range(1,6);
                Debug.Log("Opcão " + random);
 }
@@ -59,10 +59,10 @@ public class Ataques : MonoBehaviour
 }
 public void Opcao1(){
     obs2.SetActive(true);
-  
-    if(contador == 500){
-        
-        obs2.SetActive(false);
+        nuvem.SetActive(true);
+        if (contador == 2000){
+            nuvem.SetActive(false);
+            obs2.SetActive(false);
         contador =0;
         Time.timeScale = 1;
         random = 0;
@@ -70,12 +70,14 @@ public void Opcao1(){
 }
 
 public void Opcao2(){
-    obs2.SetActive(true);
+        nuvem.SetActive(true);
+        obs2.SetActive(true);
     obs.SetActive(true);
-    if(contador == 500){
+    if(contador == 2000){
         obs2.SetActive(false);
         obs.SetActive(false);
-        contador =0;
+            nuvem.SetActive(false);
+            contador =0;
         Time.timeScale = 1;
         random = 0;
     }
@@ -83,11 +85,13 @@ public void Opcao2(){
 
 public void Opcao3(){
     obs2.SetActive(true);
-    
-    if(contador == 500){
+   movimentacaoCerta.enabled = false;
+        movimentacaoInvertida.enabled = true;
+    if(contador == 2000){
         obs2.SetActive(false);
-    
-        contador =0;
+            movimentacaoCerta.enabled = true;
+            movimentacaoInvertida.enabled = false;
+            contador =0;
         Time.timeScale = 1;
         random = 0;
     }
@@ -96,10 +100,12 @@ public void Opcao3(){
 public void Opcao4(){
    
     obs.SetActive(true);
-   
-    if(contador == 500){
-      
-    obs.SetActive(false);
+        movimentacaoCerta.enabled = false;
+        movimentacaoInvertida.enabled = true;
+        if (contador == 2000){
+            movimentacaoCerta.enabled = true;
+            movimentacaoInvertida.enabled = false;
+            obs.SetActive(false);
         contador =0;
         Time.timeScale = 1;
         random = 0;
@@ -110,7 +116,7 @@ public void Opcao5(){
     obs.SetActive(true);
     nuvem.SetActive(true);
    
-    if(contador == 500){
+    if(contador == 2000){
        
         nuvem.SetActive(false);
         obs.SetActive(false);
