@@ -2433,8 +2433,8 @@ MonoBehaviour:
   - {fileID: 1614633090}
   - {fileID: 1027163365}
   - {fileID: 1444301747}
-  tempoInvisivel: 1
-  tempoAtivo: 1
+  tempoInvisivel: 10
+  tempoAtivo: 3
 --- !u!1 &314801944
 GameObject:
   m_ObjectHideFlags: 0
