@@ -5,40 +5,69 @@ using UnityEngine;
 
 public class ScriptModoDificil : MonoBehaviour
 {
-    public GameObject[] Lista;          // Itens que podem aparecer
-    public float tempoInvisivel = 2f;   // Tempo entre um item desaparecer e o próximo aparecer
+    public GameObject[] Lista;          // Itens pré-configurados no Inspector
+    public float tempoInvisivel = 2f;   // Intervalo entre itens
     public float tempoAtivo = 1f;       // Tempo que o item fica visível
 
-    private bool itemAtivo = false;     // Controla se há um item ativo no momento
+    private List<GameObject> itensDisponiveis = new List<GameObject>(); // Itens que ainda não foram coletados
+    private Coroutine cicloCorrotina;   // Referência da corrotina
 
     private void Start()
     {
-        StartCoroutine(CicloItens()); // Inicia o ciclo eterno
+        // Inicializa a lista de itens disponíveis com os objetos da Lista
+        itensDisponiveis.AddRange(Lista);
+
+        // Inicia o ciclo de aparecimento
+        cicloCorrotina = StartCoroutine(CicloItens());
     }
 
     IEnumerator CicloItens()
     {
-        while (true) // Loop infinito
+        while (true)
         {
-            // Escolhe um item aleatório
-            int numItem = Random.Range(0, Lista.Length);
-            GameObject item = Lista[numItem];
+            // Só continua se houver itens disponíveis
+            if (itensDisponiveis.Count == 0)
+            {
+                Debug.Log("Todos os itens foram coletados!");
+                yield break; // Encerra a corrotina
+            }
 
-            // Ativa o item
-            item.SetActive(true);
-            Debug.Log(item.name + " Ativado");
-            itemAtivo = true;
+            // Escolhe um item aleatório da lista de disponíveis
+            int index = Random.Range(0, itensDisponiveis.Count);
+            GameObject item = itensDisponiveis[index];
 
-            // Espera o tempo que o item fica visível
-            yield return new WaitForSeconds(tempoAtivo);
+            // Ativa o item se ele ainda existir na cena
+            if (item != null)
+            {
+                item.SetActive(true);
+                Debug.Log(item.name + " ativado.");
 
-            // Desativa o item
-            item.SetActive(false);
-            Debug.Log(item.name + " Desativado");
-            itemAtivo = false;
+                yield return new WaitForSeconds(tempoAtivo); // Tempo visível
 
-            // Espera o tempo entre ciclos
-            yield return new WaitForSeconds(tempoInvisivel);
+                // Desativa o item (se ainda existir)
+                if (item != null)
+                {
+                    item.SetActive(false);
+                    Debug.Log(item.name + " desativado.");
+                }
+            }
+            else
+            {
+                // Remove itens nulos (destruídos) da lista
+                itensDisponiveis.RemoveAt(index);
+            }
+
+            yield return new WaitForSeconds(tempoInvisivel); // Tempo invisível
+        }
+    }
+
+    // Método para remover um item destruído da lista
+    public void RemoverItemDestruido(GameObject item)
+    {
+        if (itensDisponiveis.Contains(item))
+        {
+            itensDisponiveis.Remove(item);
+            Debug.Log(item.name + " removido da lista.");
         }
     }
 }
