@@ -8,11 +8,12 @@ public class Ataques : MonoBehaviour
     public GameObject obs;
     public GameObject movim1;
     public GameObject movim2;
-    private int contador;
+    private int contador= 0;
     public GameObject nuvem;
     private int random = 0;
     public MonoBehaviour movimentacaoCerta; 
     public MonoBehaviour movimentacaoInvertida; 
+    public GameObject[] imagems;
     void Start()
     {
          movimentacaoCerta = movim1.GetComponent<MovimentacaoPlayers>();
@@ -25,9 +26,9 @@ public class Ataques : MonoBehaviour
     void Update()
     {
         
-         contador += Mathf.CeilToInt(Time.deltaTime );
+         contador++;
        
-        if(contador ==3000){
+        if(contador ==100){
             random = Random.Range(1,6);
                Debug.Log("Opcão " + random);
 }
@@ -58,11 +59,17 @@ public class Ataques : MonoBehaviour
     
 }
 public void Opcao1(){
-    obs2.SetActive(true);
+    obs.SetActive(true);
         nuvem.SetActive(true);
-        if (contador == 5000){
+        imagems[3].SetActive(true);
+        imagems[1].SetActive(true);
+      
+        if (contador ==200){
             nuvem.SetActive(false);
-            obs2.SetActive(false);
+            imagems[3].SetActive(false);
+            imagems[1].SetActive(true);
+      
+            obs.SetActive(false);
         contador =0;
         Time.timeScale = 1;
         random = 0;
@@ -72,12 +79,15 @@ public void Opcao1(){
 public void Opcao2(){
         nuvem.SetActive(true);
         obs2.SetActive(true);
+        imagems[0].SetActive(true);
+        imagems[3].SetActive(true);
     obs.SetActive(true);
-    if(contador == 5000){
+    if(contador == 200){
         obs2.SetActive(false);
-        obs.SetActive(false);
-            nuvem.SetActive(false);
-            contador =0;
+        imagems[0].SetActive(false);
+        nuvem.SetActive(false);
+        imagems[3].SetActive(false);
+        contador =0;
         Time.timeScale = 1;
         random = 0;
     }
@@ -85,12 +95,16 @@ public void Opcao2(){
 
 public void Opcao3(){
     obs2.SetActive(true);
+    imagems[0].SetActive(true);
+    imagems[2].SetActive(true);
    movimentacaoCerta.enabled = false;
         movimentacaoInvertida.enabled = true;
-    if(contador == 5000){
+    if(contador == 200){
         obs2.SetActive(false);
+        imagems[0].SetActive(false);
             movimentacaoCerta.enabled = true;
             movimentacaoInvertida.enabled = false;
+             imagems[2].SetActive(false);
             contador =0;
         Time.timeScale = 1;
         random = 0;
@@ -100,9 +114,13 @@ public void Opcao3(){
 public void Opcao4(){
    
     obs.SetActive(true);
+    imagems[1].SetActive(true);
+    imagems[2].SetActive(true);
         movimentacaoCerta.enabled = false;
         movimentacaoInvertida.enabled = true;
-        if (contador == 5000){
+        if (contador == 200){
+            imagems[2].SetActive(false);
+            imagems[1].SetActive(false);
             movimentacaoCerta.enabled = true;
             movimentacaoInvertida.enabled = false;
             obs.SetActive(false);
@@ -115,9 +133,11 @@ public void Opcao4(){
 public void Opcao5(){
     obs.SetActive(true);
     nuvem.SetActive(true);
-   
-    if(contador == 5000){
-       
+   imagems[1].SetActive(true);
+   imagems[3].SetActive(true);
+    if(contador == 200){
+       imagems[1].SetActive(false);
+       imagems[3].SetActive(false);
         nuvem.SetActive(false);
         obs.SetActive(false);
         contador =0;
