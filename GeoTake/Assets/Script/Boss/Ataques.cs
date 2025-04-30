@@ -58,25 +58,28 @@ public class Ataques : MonoBehaviour
                  }
     
 }
-public void Opcao1(){
-    obs.SetActive(true);
+    public void Opcao1()
+    {
+        obs.SetActive(true);
         nuvem.SetActive(true);
         imagems[3].SetActive(true);
         imagems[1].SetActive(true);
-      
-        if (contador ==200){
-        if (contador == 6000){
-            nuvem.SetActive(false);
-            imagems[3].SetActive(false);
-            imagems[1].SetActive(true);
-      
-            obs.SetActive(false);
-        contador =0;
-        Time.timeScale = 1;
-        random = 0;
-    }
-}
 
+        if (contador == 200)
+        {
+            if (contador == 6000)
+            {
+                nuvem.SetActive(false);
+                imagems[3].SetActive(false);
+                imagems[1].SetActive(true);
+
+                obs.SetActive(false);
+                contador = 0;
+                Time.timeScale = 1;
+                random = 0;
+            }
+        }
+    }
 public void Opcao2(){
         nuvem.SetActive(true);
         obs2.SetActive(true);
