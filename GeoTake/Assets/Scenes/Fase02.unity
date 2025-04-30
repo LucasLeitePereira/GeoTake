@@ -721,7 +721,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &103415204
 Transform:
   m_ObjectHideFlags: 0
@@ -5651,12 +5651,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 433f4b88d35bbcb4c897722cd6deeeb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cena: {fileID: 0}
   moveSpeed: 7
   rotationSpeed: 10
   left: 276
   right: 275
   up: 273
   down: 274
+  pause: 0
 --- !u!54 &617811783
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7391,12 +7393,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 433f4b88d35bbcb4c897722cd6deeeb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cena: {fileID: 0}
   moveSpeed: 7
   rotationSpeed: 10
   left: 97
   right: 100
   up: 119
   down: 115
+  pause: 0
 --- !u!54 &800332027
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7770,7 +7774,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &852047673
 Transform:
   m_ObjectHideFlags: 0
@@ -12045,7 +12049,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1341019717
 Transform:
   m_ObjectHideFlags: 0
@@ -12566,7 +12570,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1414568184
 Transform:
   m_ObjectHideFlags: 0
@@ -15287,6 +15291,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1794529174}
   - component: {fileID: 1794529173}
+  - component: {fileID: 1794529175}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -15328,6 +15333,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1794529175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794529172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 460e2c5f078f5074d9b7537e11ec6700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inimigo1: {fileID: 1969533043}
+  inimigo2: {fileID: 1414568183}
+  inimigo3: {fileID: 103415203}
+  inimigo4: {fileID: 852047672}
 --- !u!1001 &1801325756
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16473,7 +16494,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1969533044
 Transform:
   m_ObjectHideFlags: 0
