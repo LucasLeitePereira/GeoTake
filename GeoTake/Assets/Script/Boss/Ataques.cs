@@ -8,48 +8,145 @@ public class Ataques : MonoBehaviour
     public GameObject obs;
     public GameObject movim1;
     public GameObject movim2;
-       private int contador;
-           void Start()
+    private int contador= 0;
+    public GameObject nuvem;
+    private int random = 0;
+    public MonoBehaviour movimentacaoCerta; 
+    public MonoBehaviour movimentacaoInvertida; 
+    public GameObject[] imagems;
+    void Start()
     {
-      
-        
+         movimentacaoCerta = movim1.GetComponent<MovimentacaoPlayers>();
+         movimentacaoInvertida = movim2.GetComponent<MovimentoInvertido>();
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        contador += Mathf.CeilToInt(Time.deltaTime * 1);
-        Debug.Log(contador);
-        if(contador ==1500){
-               Debug.Log("Terreno Ativado");
-
-               
-                 obs.SetActive(true);
-               
-            
-           
-        }
-        if(contador ==3000){
-               Debug.Log("Terreno Desativado");
-            
-                 obs.SetActive(false);
-               
         
-        }
-        if(contador ==4500){
-               Debug.Log("Terreno Ativado");
-            
-                 obs2.SetActive(true);
-               
-           
-        }
-            if(contador ==6000){
-                Debug.Log("Terreno Desativado");
-           
-                 obs2.SetActive(false);
-               
+         contador++;
+       
+        if(contador ==100){
+            random = Random.Range(1,6);
+               Debug.Log("Opcão " + random);
+}
+        if(random ==1){
+               Debug.Log("Opcão " + random);
+            Opcao1();
+                 }
+
+        if(random ==2){
+               Debug.Log("Opcão " + random);
+            Opcao2();
+                 }
+
+        if(random ==3){
+               Debug.Log("Opcão " + random);
+            Opcao3();
+                 }
+
+        if(random ==4){
+               Debug.Log("Opcão " + random);
+            Opcao4();
+                 }
+
+        if(random ==5){
+               Debug.Log("Opcão " + random);
+            Opcao5();
+                 }
+    
+}
+    public void Opcao1()
+    {
+        obs.SetActive(true);
+        nuvem.SetActive(true);
+        imagems[3].SetActive(true);
+        imagems[1].SetActive(true);
+
+        if (contador == 200)
+        {
+            if (contador == 6000)
+            {
+                nuvem.SetActive(false);
+                imagems[3].SetActive(false);
+                imagems[1].SetActive(true);
+
+                obs.SetActive(false);
                 contador = 0;
                 Time.timeScale = 1;
+                random = 0;
+            }
         }
     }
+public void Opcao2(){
+        nuvem.SetActive(true);
+        obs2.SetActive(true);
+        imagems[0].SetActive(true);
+        imagems[3].SetActive(true);
+    obs.SetActive(true);
+    if(contador == 200){
+        obs2.SetActive(false);
+        imagems[0].SetActive(false);
+        nuvem.SetActive(false);
+        imagems[3].SetActive(false);
+        contador =0;
+        Time.timeScale = 1;
+        random = 0;
+    }
+}
+
+public void Opcao3(){
+    obs2.SetActive(true);
+    imagems[0].SetActive(true);
+    imagems[2].SetActive(true);
+   movimentacaoCerta.enabled = false;
+        movimentacaoInvertida.enabled = true;
+    if(contador == 200){
+        obs2.SetActive(false);
+        imagems[0].SetActive(false);
+            movimentacaoCerta.enabled = true;
+            movimentacaoInvertida.enabled = false;
+             imagems[2].SetActive(false);
+            contador =0;
+        Time.timeScale = 1;
+        random = 0;
+    }
+}
+
+public void Opcao4(){
+   
+    obs.SetActive(true);
+    imagems[1].SetActive(true);
+    imagems[2].SetActive(true);
+        movimentacaoCerta.enabled = false;
+        movimentacaoInvertida.enabled = true;
+        if (contador == 200){
+            imagems[2].SetActive(false);
+            imagems[1].SetActive(false);
+            movimentacaoCerta.enabled = true;
+            movimentacaoInvertida.enabled = false;
+            obs.SetActive(false);
+        contador =0;
+        Time.timeScale = 1;
+        random = 0;
+    }
+}
+
+public void Opcao5(){
+    obs.SetActive(true);
+    nuvem.SetActive(true);
+   imagems[1].SetActive(true);
+   imagems[3].SetActive(true);
+    if(contador == 200){
+       imagems[1].SetActive(false);
+       imagems[3].SetActive(false);
+        nuvem.SetActive(false);
+        obs.SetActive(false);
+        contador =0;
+        Time.timeScale = 1;
+        random = 0;
+    }
+}
 }
