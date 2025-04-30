@@ -60,7 +60,7 @@ public class Ataques : MonoBehaviour
 public void Opcao1(){
     obs2.SetActive(true);
         nuvem.SetActive(true);
-        if (contador == 5000){
+        if (contador == 6000){
             nuvem.SetActive(false);
             obs2.SetActive(false);
         contador =0;
