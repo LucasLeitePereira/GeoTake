@@ -8,6 +8,9 @@ public class MudançadeCena : MonoBehaviour
     [SerializeField] private string CenaJogar;
     [SerializeField] private GameObject painelMenuInicial;
     [SerializeField] private GameObject painelOpcoes;
+    [SerializeField] private GameObject SelectPlayer;
+    [SerializeField] private GameObject SelectDificuldade;
+
     string currentScene;
     public void Start()
     {
@@ -48,4 +51,19 @@ public class MudançadeCena : MonoBehaviour
     {
         SceneManager.LoadScene("Tela de Menu"); // Certifique-se de que a cena tem esse nome no Build Settings
     }
+
+    public void AbrirSelectPlayer()
+    {
+        painelMenuInicial.SetActive(false);
+        SelectPlayer.SetActive(true);
+    }
+
+    public void AbrirSelectDificuldade()
+    {
+        SelectPlayer.SetActive(false);
+        painelMenuInicial.SetActive(false);
+        SelectDificuldade.SetActive(true);
+    }
+
 }
+

@@ -2,15 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AtivarBarreiras : MonoBehaviour
+public class GuardarOpcoes : MonoBehaviour
 {
-     public static AtivarBarreiras atvc;
+    public int numeroJogadores;
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
+    public void umJogador()
+    {
+        numeroJogadores = 1;
+    }
     void Update()
     {
         

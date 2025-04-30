@@ -9,10 +9,6 @@ public class NewBehaviourScript : MonoBehaviour
     public GameObject inimigo2;
     public GameObject inimigo3;
     public GameObject inimigo4;
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -24,11 +20,12 @@ public class NewBehaviourScript : MonoBehaviour
         }
         if (contador > 9)
         {
-          inimigo3.SetActive(true);
+            inimigo2.SetActive(true);
+            
         }
         if (contador > 14)
         {
-            inimigo2.SetActive(true);
+            inimigo3.SetActive(true);
         }
         if (contador >19)
         {
