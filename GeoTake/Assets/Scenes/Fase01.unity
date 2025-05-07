@@ -447,7 +447,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -131}
+  m_AnchoredPosition: {x: 0, y: -396}
   m_SizeDelta: {x: 839.498, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &33182181
@@ -693,7 +693,6 @@ GameObject:
   - component: {fileID: 56153816}
   - component: {fileID: 56153817}
   - component: {fileID: 56153818}
-  - component: {fileID: 56153819}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -754,50 +753,45 @@ MonoBehaviour:
   - {fileID: 1480946731}
   - {fileID: 2044684729}
   quantidade:
-  - perguntaTexto: pergunta 1
+  - perguntaTexto: " Qual \xE9 a principal caracter\xEDstica da vegeta\xE7\xE3o do
+      Cerrado?"
     alternativasTexto:
-    - 0
-    - 1
-    - 2
-    - 3
-    indexCorreto: 0
-  - perguntaTexto: pergunta 2
-    alternativasTexto:
-    - 0
-    - 1
-    - 2
-    - 3
+    - "A) \xC1rvores altas e densas"
+    - "B) \xC1rvores retorcidas e vegeta\xE7\xE3o rasteira"
+    - "C) Presen\xE7a de con\xEDferas e musgos"
+    - D) Floresta tropical densa
     indexCorreto: 1
-  - perguntaTexto: pergunta 3
+  - perguntaTexto: "Qual \xE9 o clima predominante no Cerrado?"
     alternativasTexto:
-    - 0
-    - 1
-    - 2
-    - 3
+    - "A) Equatorial \xFAmido"
+    - "B) Semi\xE1rido"
+    - "C) Tropical sazonal (ver\xE3o chuvoso e inverno seco)"
+    - D) Subtropical
     indexCorreto: 2
-  - perguntaTexto: pergutna 4
+  - perguntaTexto: " Qual animal \xE9 t\xEDpico do bioma Cerrado?"
     alternativasTexto:
-    - 0
-    - 1
-    - 2
-    - 3
+    - "A) On\xE7a-pintada"
+    - "B) Mico-le\xE3o-dourado"
+    - "C) Lobo-guar\xE1"
+    - "D) Anta amaz\xF4nica"
+    indexCorreto: 2
+  - perguntaTexto: "Qual \xE9 uma das maiores amea\xE7as ao Cerrado atualmente?"
+    alternativasTexto:
+    - "A) Atividade vulc\xE2nica "
+    - B) Derretimento das geleiras
+    - "C) Polui\xE7\xE3o dos oceanos"
+    - "D) Expans\xE3o da agropecu\xE1ria e desmatamento"
     indexCorreto: 3
+  - perguntaTexto: "Qual dessas frutas \xE9 conhecida por ser um dos principais s\xEDmbolos
+      do Cerrado?"
+    alternativasTexto:
+    - A) Graviola
+    - B) Pequi
+    - C) Manga
+    - D) Goiaba
+    indexCorreto: 1
   index: 0
-  cena: fase02
---- !u!114 &56153819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 56153815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 211ef94ba5679064a85fc8482421911e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player1: {fileID: 2140223650}
-  Player2: {fileID: 1771526259}
+  cena: Fase02
 --- !u!1 &57893790
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,7 +1300,7 @@ GameObject:
   - component: {fileID: 161644153}
   - component: {fileID: 161644152}
   m_Layer: 5
-  m_Name: Iniciar Quiz
+  m_Name: Quiz
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1329,7 +1323,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 153}
+  m_AnchoredPosition: {x: 0, y: 318}
   m_SizeDelta: {x: 839.498, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &161644152
@@ -1378,7 +1372,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 778833940}
         m_TargetAssemblyTypeName: "Mudan\xE7adeCena, Assembly-CSharp"
-        m_MethodName: Jogar
+        m_MethodName: AbrirQuiz
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3196,8 +3190,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 905.35345, y: -101.49686}
-  m_SizeDelta: {x: 400, y: 200}
+  m_AnchoredPosition: {x: 955.35345, y: -88.99686}
+  m_SizeDelta: {x: 400, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &403392817
 MonoBehaviour:
@@ -5863,13 +5857,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CenaJogar: Fase02
+  painelMenuInicial: {fileID: 2021843014}
   painelOpcoes: {fileID: 1864409156}
   SelectPlayer: {fileID: 0}
-  painelMenuInicial: {fileID: 2021843014}
   SelectDificuldade: {fileID: 0}
-  CarregarJogo: 
-  TelaPerdeu: {fileID: 0}
-  TelaGanhou: {fileID: 0}
+  Quiz: {fileID: 1051029130}
 --- !u!114 &778833941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5882,6 +5874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c13489bc27a7130419409421e11f3181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numeroJogadores: 0
 --- !u!4 &779790416 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2551574300600872957, guid: 0ce8600790231bb4c9644153907e7d57, type: 3}
@@ -7397,8 +7390,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 405.35345, y: -101.49686}
-  m_SizeDelta: {x: 400, y: 200}
+  m_AnchoredPosition: {x: 355.35345, y: -88.99686}
+  m_SizeDelta: {x: 400, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &926635861
 MonoBehaviour:
@@ -10828,6 +10821,140 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4586105336581863487, guid: 20a5b9a10da87464fa016ef6ec754d99, type: 3}
   m_PrefabInstance: {fileID: 1970458627}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1371655346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1371655347}
+  - component: {fileID: 1371655349}
+  - component: {fileID: 1371655348}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1371655347
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371655346}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2044116298}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0.000015258789}
+  m_SizeDelta: {x: -0.000061035, y: 0.000030518}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1371655348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371655346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "OP\xC7\xD5ES"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: d170e86d8600578479f033153c8ae051, type: 2}
+  m_sharedMaterial: {fileID: 1270287484492294991, guid: d170e86d8600578479f033153c8ae051, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 85
+  m_fontSizeBase: 85
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 0
+  m_fontSizeMax: 0
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 0
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1371655349
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371655346}
+  m_CullTransparentMesh: 1
 --- !u!4 &1388946326 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2551574300600872957, guid: 0ce8600790231bb4c9644153907e7d57, type: 3}
@@ -11473,6 +11600,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 161644151}
+  - {fileID: 2044116298}
   - {fileID: 33182180}
   m_Father: {fileID: 1654236860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11780,8 +11908,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 405.35345, y: -356.49686}
-  m_SizeDelta: {x: 400, y: 200}
+  m_AnchoredPosition: {x: 355.35345, y: -368.99686}
+  m_SizeDelta: {x: 400, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1480946731
 MonoBehaviour:
@@ -12350,7 +12478,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: INICIAR QUIZ
+  m_text: QUIZ
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d170e86d8600578479f033153c8ae051, type: 2}
   m_sharedMaterial: {fileID: 1270287484492294991, guid: d170e86d8600578479f033153c8ae051, type: 2}
@@ -13013,15 +13141,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 133dbebb40952364a8a2584c770ce76c, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -13562,7 +13690,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1654236860
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17860,6 +17988,139 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039227207}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2044116297
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2044116298}
+  - component: {fileID: 2044116301}
+  - component: {fileID: 2044116300}
+  - component: {fileID: 2044116299}
+  m_Layer: 5
+  m_Name: "Bot\xE3o de Op\xE7\xF5es"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2044116298
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044116297}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1371655347}
+  m_Father: {fileID: 1448712109}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -25}
+  m_SizeDelta: {x: 839.498, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2044116299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044116297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.62734854, b: 0, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.3
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2044116300}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 778833940}
+        m_TargetAssemblyTypeName: "Mudan\xE7adeCena, Assembly-CSharp"
+        m_MethodName: AbrirOpcoes
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+--- !u!114 &2044116300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044116297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 0a86755a7999eff40a50a260f4dc2bfb, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2044116301
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044116297}
+  m_CullTransparentMesh: 1
 --- !u!1 &2044684727
 GameObject:
   m_ObjectHideFlags: 0
@@ -17896,8 +18157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 905.35345, y: -356.49686}
-  m_SizeDelta: {x: 400, y: 200}
+  m_AnchoredPosition: {x: 955.35345, y: -368.99686}
+  m_SizeDelta: {x: 400, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2044684729
 MonoBehaviour:
@@ -18041,8 +18302,8 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 1
   m_StartAxis: 1
-  m_CellSize: {x: 400, y: 200}
-  m_Spacing: {x: 100, y: 55}
+  m_CellSize: {x: 400, y: 150}
+  m_Spacing: {x: 200, y: 130}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!4 &2061696656 stripped

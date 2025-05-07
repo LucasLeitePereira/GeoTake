@@ -6,13 +6,11 @@ using UnityEngine.SceneManagement;
 public class MudançadeCena : MonoBehaviour
 {
     [SerializeField] private string CenaJogar;
+    [SerializeField] private GameObject painelMenuInicial;
     [SerializeField] private GameObject painelOpcoes;
     [SerializeField] private GameObject SelectPlayer;
-    [SerializeField] private GameObject painelMenuInicial;
     [SerializeField] private GameObject SelectDificuldade;
-    [SerializeField] private string CarregarJogo;
-    [SerializeField] private GameObject TelaPerdeu;
-    [SerializeField] private GameObject TelaGanhou;
+    [SerializeField] private GameObject Quiz;
 
     string currentScene;
 
@@ -32,12 +30,6 @@ public class MudançadeCena : MonoBehaviour
     {
         Debug.Log("Inciando o jogo");
         SceneManager.LoadScene(CenaJogar);
-    }
-
-    public void CarregarFase()
-    {
-        Debug.Log("Inciando o jogo");
-        SceneManager.LoadScene(CarregarJogo);
     }
 
     public void ReiniciarLevel()
@@ -80,15 +72,12 @@ public class MudançadeCena : MonoBehaviour
         painelMenuInicial.SetActive(false);
         SelectDificuldade.SetActive(true);
     }
-
-    public void AbrirOpcoesPerdeu()
+    public void AbrirQuiz()
     {
-        TelaPerdeu.SetActive(false);
+        painelMenuInicial.SetActive(false);
+        Quiz.SetActive(true);
 
     }
-
-
-
 
 }
 
