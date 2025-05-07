@@ -9,22 +9,20 @@ public class perseguir1 : MonoBehaviour
    
     public NavMeshAgent agente; // O NavMeshAgent do inimigo
 
-   
-
-
-void Start()
+    void Start()
     {
-      
-  
+        Time.fixedDeltaTime = 0.01f;
     }
-
-    void Update()
+    void FixedUpdate()
     {
-    
-   
-     agente.SetDestination(jogador1.position);
+        if (agente.velocity.sqrMagnitude > 0.1f) // se estiver se movendo
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(agente.velocity.normalized);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 180f); // suavidade ajustável
+        }
 
-
-
+        agente.SetDestination(jogador1.position);
     }
 }
+    
+
