@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2261,6 +2261,7 @@ GameObject:
   - component: {fileID: 325641276}
   - component: {fileID: 325641278}
   - component: {fileID: 325641277}
+  - component: {fileID: 325641279}
   m_Layer: 5
   m_Name: familia
   m_TagString: Untagged
@@ -2325,6 +2326,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325641275}
   m_CullTransparentMesh: 1
+--- !u!114 &325641279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325641275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1552ce7f2c5bc1340a2836a2107bc0dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &328465773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5455,6 +5468,7 @@ GameObject:
   - component: {fileID: 702034834}
   - component: {fileID: 702034836}
   - component: {fileID: 702034835}
+  - component: {fileID: 702034837}
   m_Layer: 5
   m_Name: trocar
   m_TagString: Untagged
@@ -5519,6 +5533,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702034833}
   m_CullTransparentMesh: 1
+--- !u!114 &702034837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702034833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1552ce7f2c5bc1340a2836a2107bc0dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &705285463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12608,6 +12634,7 @@ GameObject:
   - component: {fileID: 1015905698}
   - component: {fileID: 1015905700}
   - component: {fileID: 1015905699}
+  - component: {fileID: 1015905701}
   m_Layer: 5
   m_Name: nuvem
   m_TagString: Untagged
@@ -12672,6 +12699,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1015905697}
   m_CullTransparentMesh: 1
+--- !u!114 &1015905701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015905697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1552ce7f2c5bc1340a2836a2107bc0dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1023770812
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16033,6 +16072,7 @@ GameObject:
   - component: {fileID: 1388885466}
   - component: {fileID: 1388885468}
   - component: {fileID: 1388885467}
+  - component: {fileID: 1388885469}
   m_Layer: 5
   m_Name: tronco
   m_TagString: Untagged
@@ -16097,6 +16137,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388885465}
   m_CullTransparentMesh: 1
+--- !u!114 &1388885469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388885465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1552ce7f2c5bc1340a2836a2107bc0dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1398226657
 GameObject:
   m_ObjectHideFlags: 0

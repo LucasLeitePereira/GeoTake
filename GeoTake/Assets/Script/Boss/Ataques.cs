@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.Tracing;
+using System.Xml.Schema;
 using UnityEngine;
 
 public class Ataques : MonoBehaviour
@@ -27,6 +28,7 @@ public class Ataques : MonoBehaviour
     
     void Start()
     {
+        icon = Icon.ic;
          movimentacaoCerta = movim1.GetComponent<MovimentacaoPlayers>();
          movimentacaoInvertida = movim2.GetComponent<MovimentoInvertido>();
             
@@ -122,8 +124,12 @@ public void Opcao5(){
     }
     public void EncerrarEvento()
     {
-        if(opcao1 == true)
+       
+       
+        if (opcao1 == true)
         {
+
+           
             nuvem.SetActive(false);
             obs.SetActive(false);
             opcao1 = false;
