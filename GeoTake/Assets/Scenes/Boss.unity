@@ -5896,8 +5896,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.22352941, g: 0.36078432, b: 0.5294118, a: 0.57254905}
+  m_Intensity: 1.72
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -5997,7 +5997,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.26
   m_Speed: 8
-  m_Acceleration: 10
+  m_Acceleration: 11
   avoidancePriority: 50
   m_AngularSpeed: 360
   m_StoppingDistance: 0
@@ -6007,7 +6007,7 @@ NavMeshAgent:
   m_Height: 0.5
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!54 &740140749
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6119,8 +6119,8 @@ ParticleSystemRenderer:
   m_RenderMode: 2
   m_MeshDistribution: 0
   m_SortMode: 0
-  m_MinParticleSize: 0.6
-  m_MaxParticleSize: 15.12
+  m_MinParticleSize: 0.5
+  m_MaxParticleSize: 3.7
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -6154,7 +6154,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 768242525}
   serializedVersion: 8
-  lengthInSec: 5
+  lengthInSec: 4.7
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -6229,7 +6229,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 6.61
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -6282,8 +6282,8 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.5
-      minScalar: 0.1
+      scalar: 0.6
+      minScalar: 1.54
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -6717,7 +6717,7 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     gravitySource: 0
-    maxNumParticles: 1000
+    maxNumParticles: 50
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -6777,7 +6777,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 10
+    type: 18
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
@@ -10877,13 +10877,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 768242525}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 6.1625886, z: -3.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.5242114, y: 0.474555, z: 0.47455508, w: 0.5242114}
+  m_LocalPosition: {x: -22.8, y: 14.1, z: -3.2}
+  m_LocalScale: {x: 3.6343794, y: 23.290125, z: 4.9413853}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 5.693, y: 90, z: 90}
 --- !u!1001 &788198339
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15376,6 +15376,10 @@ PrefabInstance:
       value: Wolf (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f07aa534c097c9d4191d7ca3c5c6db40, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f07aa534c097c9d4191d7ca3c5c6db40, type: 3}
       propertyPath: m_TagString
       value: Inimigos
       objectReference: {fileID: 0}
@@ -15439,7 +15443,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.26
   m_Speed: 8
-  m_Acceleration: 10
+  m_Acceleration: 11
   avoidancePriority: 50
   m_AngularSpeed: 360
   m_StoppingDistance: 0
@@ -15449,7 +15453,7 @@ NavMeshAgent:
   m_Height: 0.5
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!54 &1334778169
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15566,12 +15570,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 433f4b88d35bbcb4c897722cd6deeeb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cena: {fileID: 0}
   moveSpeed: 7
   rotationSpeed: 10
   left: 276
   right: 275
   up: 273
   down: 274
+  pause: 0
 --- !u!65 &1360650607
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16449,6 +16455,10 @@ PrefabInstance:
       value: Wolf (3)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f07aa534c097c9d4191d7ca3c5c6db40, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f07aa534c097c9d4191d7ca3c5c6db40, type: 3}
       propertyPath: m_TagString
       value: Inimigos
       objectReference: {fileID: 0}
@@ -16512,7 +16522,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.26
   m_Speed: 8
-  m_Acceleration: 10
+  m_Acceleration: 11
   avoidancePriority: 50
   m_AngularSpeed: 360
   m_StoppingDistance: 0
@@ -16522,7 +16532,7 @@ NavMeshAgent:
   m_Height: 0.5
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!54 &1430361916
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -17492,6 +17502,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f07aa534c097c9d4191d7ca3c5c6db40, type: 3}
       propertyPath: m_Name
       value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f07aa534c097c9d4191d7ca3c5c6db40, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f07aa534c097c9d4191d7ca3c5c6db40, type: 3}
       propertyPath: m_TagString
@@ -18571,6 +18585,10 @@ PrefabInstance:
       value: Wolf (2)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f07aa534c097c9d4191d7ca3c5c6db40, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f07aa534c097c9d4191d7ca3c5c6db40, type: 3}
       propertyPath: m_TagString
       value: Inimigos
       objectReference: {fileID: 0}
@@ -18634,7 +18652,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.26
   m_Speed: 8
-  m_Acceleration: 10
+  m_Acceleration: 11
   avoidancePriority: 50
   m_AngularSpeed: 360
   m_StoppingDistance: 0
@@ -18644,7 +18662,7 @@ NavMeshAgent:
   m_Height: 0.5
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!54 &1717283700
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -12,10 +12,17 @@ public class MudançadeCena : MonoBehaviour
     [SerializeField] private GameObject SelectDificuldade;
 
     string currentScene;
+
+    public static MudançadeCena mc;
     public void Start()
     {
         // Obtém o nome da cena atual
         currentScene = SceneManager.GetActiveScene().name;
+
+        if (mc == null)
+        {
+            mc = this;
+        }
 
     }
     public void Jogar()
