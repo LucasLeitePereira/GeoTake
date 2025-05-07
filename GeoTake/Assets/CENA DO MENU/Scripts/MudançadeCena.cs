@@ -10,6 +10,7 @@ public class MudançadeCena : MonoBehaviour
     [SerializeField] private GameObject painelOpcoes;
     [SerializeField] private GameObject SelectPlayer;
     [SerializeField] private GameObject SelectDificuldade;
+    [SerializeField] private GameObject Quiz;
 
     string currentScene;
 
@@ -70,6 +71,12 @@ public class MudançadeCena : MonoBehaviour
         SelectPlayer.SetActive(false);
         painelMenuInicial.SetActive(false);
         SelectDificuldade.SetActive(true);
+    }
+    public void AbrirQuiz()
+    {
+        painelMenuInicial.SetActive(false);
+        Quiz.SetActive(true);
+
     }
 
 }
