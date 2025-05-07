@@ -16,7 +16,7 @@ public class Ataques : MonoBehaviour
     public MonoBehaviour movimentacaoCerta; 
     public MonoBehaviour movimentacaoInvertida; 
     public GameObject[] imagems;
-    private float cont = 0;
+  
    
     private bool rodando = false;
     private bool opcao1 = false;
@@ -28,7 +28,7 @@ public class Ataques : MonoBehaviour
     
     void Start()
     {
-        icon = Icon.ic;
+       
          movimentacaoCerta = movim1.GetComponent<MovimentacaoPlayers>();
          movimentacaoInvertida = movim2.GetComponent<MovimentoInvertido>();
             
