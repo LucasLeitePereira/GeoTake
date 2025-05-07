@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Icon : MonoBehaviour
 {
-
+    public static Icon ic;
     private Vector3 originalScale;
     private float temp;
+    public bool validar = true;
     void Start()
     {
         // Armazena o tamanho original do objeto
@@ -16,7 +17,7 @@ public class Icon : MonoBehaviour
      void Update()
     {
           temp += Time.deltaTime;
-        if(temp > 9 )
+        if(temp > 9 && validar == true)
         {
             StartCoroutine(ScaleReduz());
           
@@ -50,6 +51,7 @@ public class Icon : MonoBehaviour
 
         if (t > 1f)
         {
+            validar = false;
             temp = 0;
             gameObject.SetActive(false);
         }
