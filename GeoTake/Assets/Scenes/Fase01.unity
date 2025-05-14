@@ -693,6 +693,7 @@ GameObject:
   - component: {fileID: 56153816}
   - component: {fileID: 56153817}
   - component: {fileID: 56153818}
+  - component: {fileID: 56153819}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -792,6 +793,20 @@ MonoBehaviour:
     indexCorreto: 1
   index: 0
   cena: Fase02
+--- !u!114 &56153819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56153815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211ef94ba5679064a85fc8482421911e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player1: {fileID: 2140223650}
+  Player2: {fileID: 1771526259}
 --- !u!1 &57893790
 GameObject:
   m_ObjectHideFlags: 0
@@ -5821,7 +5836,6 @@ GameObject:
   m_Component:
   - component: {fileID: 778833939}
   - component: {fileID: 778833940}
-  - component: {fileID: 778833941}
   m_Layer: 0
   m_Name: MenuManeger
   m_TagString: Untagged
@@ -5857,23 +5871,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CenaJogar: Fase02
-  painelMenuInicial: {fileID: 2021843014}
   painelOpcoes: {fileID: 1864409156}
   SelectPlayer: {fileID: 0}
+  painelMenuInicial: {fileID: 2021843014}
   SelectDificuldade: {fileID: 0}
-  Quiz: {fileID: 1051029130}
---- !u!114 &778833941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778833938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c13489bc27a7130419409421e11f3181, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  CarregarJogo: 
+  TelaPerdeu: {fileID: 2026263677}
+  TelaGanhou: {fileID: 1654236859}
 --- !u!4 &779790416 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2551574300600872957, guid: 0ce8600790231bb4c9644153907e7d57, type: 3}
@@ -14737,14 +14741,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 433f4b88d35bbcb4c897722cd6deeeb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cena: {fileID: 0}
   moveSpeed: 5
   rotationSpeed: 10
   left: 276
   right: 275
   up: 273
   down: 274
-  pause: 0
 --- !u!54 &1771526262
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20054,14 +20056,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 433f4b88d35bbcb4c897722cd6deeeb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cena: {fileID: 0}
   moveSpeed: 5
   rotationSpeed: 10
   left: 97
   right: 100
   up: 119
   down: 115
-  pause: 0
 --- !u!114 &2140223659
 MonoBehaviour:
   m_ObjectHideFlags: 0
