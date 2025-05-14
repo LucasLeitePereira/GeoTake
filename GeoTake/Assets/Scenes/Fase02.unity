@@ -3387,7 +3387,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &298465951
 Transform:
   m_ObjectHideFlags: 0
@@ -16369,9 +16369,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inimigo1: {fileID: 1969533043}
-  inimigo2: {fileID: 1414568183}
+  inimigo2: {fileID: 852047672}
   inimigo3: {fileID: 103415203}
-  inimigo4: {fileID: 852047672}
+  inimigo4: {fileID: 1414568183}
 --- !u!114 &1794529176
 MonoBehaviour:
   m_ObjectHideFlags: 0
