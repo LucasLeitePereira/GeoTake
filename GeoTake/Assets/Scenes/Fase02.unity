@@ -3774,7 +3774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7818bd396a8d6364b8afdbcec5c3a9e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CenaJogar: Boss
+  CenaJogar: Fase02
   painelMenuInicial: {fileID: 1072711264}
   painelOpcoes: {fileID: 328613904}
   SelectPlayer: {fileID: 0}
@@ -7889,7 +7889,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &800332025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9682,7 +9682,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "PR\xD3XIMA FASE"
+  m_text: QUIZ
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d170e86d8600578479f033153c8ae051, type: 2}
   m_sharedMaterial: {fileID: 1270287484492294991, guid: d170e86d8600578479f033153c8ae051, type: 2}
