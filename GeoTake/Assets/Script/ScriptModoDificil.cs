@@ -17,32 +17,7 @@ public class ScriptModoDificil : MonoBehaviour
         // Inicializa a lista de itens disponíveis com os objetos da Lista
         itensDisponiveis.AddRange(Lista);
 
-        // Inicia a sequência inicial (todos os itens aparecem e desaparecem)
-        StartCoroutine(IniciarJogo());
-    }
-
-    IEnumerator IniciarJogo()
-    {
-        // Ativa todos os itens no início
-        foreach (GameObject item in itensDisponiveis)
-        {
-            if (item != null) item.SetActive(true);
-        }
-
-        Debug.Log("Todos os itens ativados no início!");
-
-        // Espera o tempoAtivo para desativar todos
-        yield return new WaitForSeconds(tempoAtivo);
-
-        // Desativa todos os itens
-        foreach (GameObject item in itensDisponiveis)
-        {
-            if (item != null) item.SetActive(false);
-        }
-
-        Debug.Log("Todos os itens desativados. Iniciando ciclo...");
-
-        // Inicia o ciclo normal de aparecimento
+        // Inicia o ciclo de aparecimento
         cicloCorrotina = StartCoroutine(CicloItens());
     }
 

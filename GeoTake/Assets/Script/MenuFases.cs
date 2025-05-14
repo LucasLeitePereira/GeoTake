@@ -3,13 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MudançadeCena : MonoBehaviour
+public class MenuFases : MonoBehaviour
 {
-    [SerializeField] private string CenaJogar;
     [SerializeField] private GameObject painelOpcoes;
-    [SerializeField] private GameObject SelectPlayer;
-    [SerializeField] private GameObject painelMenuInicial;
-    [SerializeField] private GameObject SelectDificuldade;
     [SerializeField] private string CarregarJogo;
     [SerializeField] private GameObject TelaPerdeu;
     [SerializeField] private GameObject TelaGanhou;
@@ -17,20 +13,9 @@ public class MudançadeCena : MonoBehaviour
     string currentScene;
     public void Start()
     {
-        // Obtém o nome da cena atual
+        // Obt�m o nome da cena atual
         currentScene = SceneManager.GetActiveScene().name;
 
-    }
-    public void Jogar()
-    {
-        Debug.Log("Inciando o jogo");
-        SceneManager.LoadScene(CenaJogar);
-    }
-
-    public void CarregarFase()
-    {
-        Debug.Log("Inciando o jogo");
-        SceneManager.LoadScene(CarregarJogo);
     }
 
     public void ReiniciarLevel()
@@ -38,16 +23,27 @@ public class MudançadeCena : MonoBehaviour
         SceneManager.LoadScene(currentScene);
     }
 
+    public void CarregarProximaFase()
+    {
+        SceneManager.LoadScene(CarregarJogo);
+    }
+
+    public void CarreagarQuiz()
+    {
+ 
+    }
+
+
     public void AbrirOpcoes()
     {
-        painelMenuInicial.SetActive(false);
+        TelaGanhou.SetActive(false);
+        TelaPerdeu.SetActive(false);
         painelOpcoes.SetActive(true);
     }
 
     public void FecharOpcoes()
     {
         painelOpcoes.SetActive(false);
-        painelMenuInicial.SetActive(true);
     }
 
     public void Sair()
@@ -61,18 +57,6 @@ public class MudançadeCena : MonoBehaviour
         SceneManager.LoadScene("Tela de Menu"); // Certifique-se de que a cena tem esse nome no Build Settings
     }
 
-    public void AbrirSelectPlayer()
-    {
-        painelMenuInicial.SetActive(false);
-        SelectPlayer.SetActive(true);
-    }
-
-    public void AbrirSelectDificuldade()
-    {
-        SelectPlayer.SetActive(false);
-        painelMenuInicial.SetActive(false);
-        SelectDificuldade.SetActive(true);
-    }
 
     public void AbrirOpcoesPerdeu()
     {
