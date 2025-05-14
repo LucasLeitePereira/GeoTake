@@ -5874,7 +5874,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c13489bc27a7130419409421e11f3181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numeroJogadores: 0
 --- !u!4 &779790416 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2551574300600872957, guid: 0ce8600790231bb4c9644153907e7d57, type: 3}
@@ -11564,7 +11563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeText: {fileID: 432097646}
-  timeCount: 90
+  timeCount: 40
   timeOver: 0
   itensText: {fileID: 1543311910}
   itens: 0
