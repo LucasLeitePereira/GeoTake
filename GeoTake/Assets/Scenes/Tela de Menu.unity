@@ -428,7 +428,7 @@ MonoBehaviour:
         m_CallState: 1
       - m_Target: {fileID: 2119344983}
         m_TargetAssemblyTypeName: "Mudan\xE7adeCena, Assembly-CSharp"
-        m_MethodName: CarregarFase
+        m_MethodName: Jogar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5611,7 +5611,7 @@ MonoBehaviour:
         m_CallState: 1
       - m_Target: {fileID: 2119344983}
         m_TargetAssemblyTypeName: "Mudan\xE7adeCena, Assembly-CSharp"
-        m_MethodName: CarregarFase
+        m_MethodName: Jogar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6456,12 +6456,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7818bd396a8d6364b8afdbcec5c3a9e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CenaJogar: SelectPlayer
+  CenaJogar: Fase01
   painelOpcoes: {fileID: 1961199092}
   SelectPlayer: {fileID: 661551825}
   painelMenuInicial: {fileID: 529620705}
   SelectDificuldade: {fileID: 396649846}
-  CarregarJogo: Fase01
+  CarregarJogo: 
   TelaPerdeu: {fileID: 0}
   TelaGanhou: {fileID: 0}
 --- !u!114 &2119344984
@@ -6576,7 +6576,7 @@ MonoBehaviour:
         m_CallState: 1
       - m_Target: {fileID: 2119344983}
         m_TargetAssemblyTypeName: "Mudan\xE7adeCena, Assembly-CSharp"
-        m_MethodName: CarregarFase
+        m_MethodName: Jogar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

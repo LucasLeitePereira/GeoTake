@@ -693,7 +693,6 @@ GameObject:
   - component: {fileID: 56153816}
   - component: {fileID: 56153817}
   - component: {fileID: 56153818}
-  - component: {fileID: 56153819}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -754,50 +753,45 @@ MonoBehaviour:
   - {fileID: 1480946731}
   - {fileID: 2044684729}
   quantidade:
-  - perguntaTexto: pergunta 1
+  - perguntaTexto: " Qual \xE9 a principal caracter\xEDstica da vegeta\xE7\xE3o do
+      Cerrado?"
     alternativasTexto:
-    - 0
-    - 1
-    - 2
-    - 3
-    indexCorreto: 0
-  - perguntaTexto: pergunta 2
-    alternativasTexto:
-    - 0
-    - 1
-    - 2
-    - 3
+    - "A) \xC1rvores altas e densas"
+    - "B) \xC1rvores retorcidas e vegeta\xE7\xE3o rasteira"
+    - "C) Presen\xE7a de con\xEDferas e musgos"
+    - D) Floresta tropical densa
     indexCorreto: 1
-  - perguntaTexto: pergunta 3
+  - perguntaTexto: "Qual \xE9 o clima predominante no Cerrado?"
     alternativasTexto:
-    - 0
-    - 1
-    - 2
-    - 3
+    - "A) Equatorial \xFAmido"
+    - "B) Semi\xE1rido"
+    - "C) Tropical sazonal (ver\xE3o chuvoso e inverno seco)"
+    - D) Subtropical
     indexCorreto: 2
-  - perguntaTexto: pergutna 4
+  - perguntaTexto: " Qual animal \xE9 t\xEDpico do bioma Cerrado?"
     alternativasTexto:
-    - 0
-    - 1
-    - 2
-    - 3
+    - "A) On\xE7a-pintada"
+    - "B) Mico-le\xE3o-dourado"
+    - "C) Lobo-guar\xE1"
+    - "D) Anta amaz\xF4nica"
+    indexCorreto: 2
+  - perguntaTexto: "Qual \xE9 uma das maiores amea\xE7as ao Cerrado atualmente?"
+    alternativasTexto:
+    - "A) Atividade vulc\xE2nica "
+    - B) Derretimento das geleiras
+    - "C) Polui\xE7\xE3o dos oceanos"
+    - "D) Expans\xE3o da agropecu\xE1ria e desmatamento"
     indexCorreto: 3
+  - perguntaTexto: "Qual dessas frutas \xE9 conhecida por ser um dos principais s\xEDmbolos
+      do Cerrado?"
+    alternativasTexto:
+    - A) Graviola
+    - B) Pequi
+    - C) Manga
+    - D) Goiaba
+    indexCorreto: 1
   index: 0
-  cena: fase02
---- !u!114 &56153819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 56153815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 211ef94ba5679064a85fc8482421911e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player1: {fileID: 2140223650}
-  Player2: {fileID: 1771526259}
+  cena: Fase02
 --- !u!1 &57893790
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,7 +1300,7 @@ GameObject:
   - component: {fileID: 161644153}
   - component: {fileID: 161644152}
   m_Layer: 5
-  m_Name: "Pr\xF3xima fase"
+  m_Name: Quiz
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1378,7 +1372,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 778833940}
         m_TargetAssemblyTypeName: "Mudan\xE7adeCena, Assembly-CSharp"
-        m_MethodName: Jogar
+        m_MethodName: AbrirQuiz
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3196,8 +3190,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 905.35345, y: -101.49686}
-  m_SizeDelta: {x: 400, y: 200}
+  m_AnchoredPosition: {x: 955.35345, y: -88.99686}
+  m_SizeDelta: {x: 400, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &403392817
 MonoBehaviour:
@@ -5863,13 +5857,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CenaJogar: Fase02
+  painelMenuInicial: {fileID: 2021843014}
   painelOpcoes: {fileID: 1864409156}
   SelectPlayer: {fileID: 0}
-  painelMenuInicial: {fileID: 2021843014}
   SelectDificuldade: {fileID: 0}
-  CarregarJogo: 
-  TelaPerdeu: {fileID: 0}
-  TelaGanhou: {fileID: 0}
+  Quiz: {fileID: 1051029130}
 --- !u!114 &778833941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7398,8 +7390,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 405.35345, y: -101.49686}
-  m_SizeDelta: {x: 400, y: 200}
+  m_AnchoredPosition: {x: 355.35345, y: -88.99686}
+  m_SizeDelta: {x: 400, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &926635861
 MonoBehaviour:
@@ -11916,8 +11908,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 405.35345, y: -356.49686}
-  m_SizeDelta: {x: 400, y: 200}
+  m_AnchoredPosition: {x: 355.35345, y: -368.99686}
+  m_SizeDelta: {x: 400, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1480946731
 MonoBehaviour:
@@ -12486,7 +12478,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "PR\xD3XIMA FASE"
+  m_text: QUIZ
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d170e86d8600578479f033153c8ae051, type: 2}
   m_sharedMaterial: {fileID: 1270287484492294991, guid: d170e86d8600578479f033153c8ae051, type: 2}
@@ -13149,15 +13141,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 133dbebb40952364a8a2584c770ce76c, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -18165,8 +18157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 905.35345, y: -356.49686}
-  m_SizeDelta: {x: 400, y: 200}
+  m_AnchoredPosition: {x: 955.35345, y: -368.99686}
+  m_SizeDelta: {x: 400, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2044684729
 MonoBehaviour:
@@ -18310,8 +18302,8 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 1
   m_StartAxis: 1
-  m_CellSize: {x: 400, y: 200}
-  m_Spacing: {x: 100, y: 55}
+  m_CellSize: {x: 400, y: 150}
+  m_Spacing: {x: 200, y: 130}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!4 &2061696656 stripped
