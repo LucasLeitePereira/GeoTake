@@ -5,7 +5,6 @@ using UnityEngine;
 public class VidaScript : MonoBehaviour
 {
     public static VidaScript vs;
-
     
     public GameController gcPlayer;
 
