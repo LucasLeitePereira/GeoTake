@@ -1,5 +1,7 @@
+
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using UnityEngine;
 
 public class Ataques : MonoBehaviour
@@ -21,8 +23,6 @@ public class Ataques : MonoBehaviour
 
 
     }
-
-    // Update is called once per frame
     void Update()
     {
         
@@ -150,3 +150,4 @@ public void Opcao5(){
     }
 }
 }
+

@@ -15,10 +15,17 @@ public class MudançadeCena : MonoBehaviour
     [SerializeField] private GameObject TelaGanhou;
 
     string currentScene;
+
+    public static MudançadeCena mc;
     public void Start()
     {
         // Obtém o nome da cena atual
         currentScene = SceneManager.GetActiveScene().name;
+
+        if (mc == null)
+        {
+            mc = this;
+        }
 
     }
     public void Jogar()
@@ -80,7 +87,12 @@ public class MudançadeCena : MonoBehaviour
 
     }
 
-
+    public void VoltarMenuInicial()
+    {
+        painelMenuInicial.SetActive(true);
+        SelectDificuldade.SetActive(false);
+        SelectPlayer.SetActive(false);
+    }
 
 
 }

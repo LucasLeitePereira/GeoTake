@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MovimentacaoPlayers : MonoBehaviour
 {
+    public MudançadeCena cena;
     public float moveSpeed = 5f; // Velocidade de movimento
     public float rotationSpeed = 10f; // Velocidade de rotação
 
@@ -11,6 +13,7 @@ public class MovimentacaoPlayers : MonoBehaviour
     public KeyCode right;
     public KeyCode up;
     public KeyCode down;
+    public KeyCode pause;
 
     void Update()
     {
