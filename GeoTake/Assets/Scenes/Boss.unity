@@ -25100,9 +25100,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1967904975}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 183b5f439058d34459a3f8ed6b7b517e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d4639386815fc64dba79d1f71580f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resultados: {fileID: 1890211639}
   cabecalho: {fileID: 404334703}
   alternativa:
   - {fileID: 1383419124}
@@ -25110,43 +25111,34 @@ MonoBehaviour:
   - {fileID: 1691831701}
   - {fileID: 929346839}
   quantidade:
-  - perguntaTexto: "Qual \xE9 o principal tipo de vegeta\xE7\xE3o da Floresta Amaz\xF4nica?"
+  - perguntaTexto: a
     alternativasTexto:
-    - A) Cerrado
-    - B) Campos limpos
-    - "C) Floresta tropical \xFAmida"
-    - D) Caatinga
-    indexCorreto: 2
-  - perguntaTexto: "Qual dos seguintes rios \xE9 o mais importante da Floresta Amaz\xF4nica?"
-    alternativasTexto:
-    - A) Rio Amazonas
-    - B) Rio Tocantins
-    - "C) Rio S\xE3o Francisco "
-    - "D) Rio Paran\xE1"
+    - 1
+    - 2
+    - 3
+    - 4
     indexCorreto: 0
-  - perguntaTexto: "Qual das alternativas abaixo apresenta uma amea\xE7a \xE0 Floresta
-      Amaz\xF4nica?"
+  - perguntaTexto: b
     alternativasTexto:
-    - "A) Preserva\xE7\xE3o ambiental"
-    - B) Clima equatorial
-    - "C) Turismo sustent\xE1vel"
-    - D) Desmatamento ilegal
-    indexCorreto: 3
-  - perguntaTexto: "Qual das seguintes caracter\xEDsticas \xE9 t\xEDpica do clima
-      da Floresta Amaz\xF4nica?"
-    alternativasTexto:
-    - "A) Esta\xE7\xF5es bem definidas, com inverno seco"
-    - B) Altas temperaturas e chuvas abundantes o ano todo
-    - C) Frio intenso durante o inverno
-    - D) Pouca umidade e chuvas escassas
+    - 1
+    - 2
+    - 3
+    - 4
     indexCorreto: 1
-  - perguntaTexto: "Qual desses animais \xE9 um exemplo da fauna da Floresta Amaz\xF4nica?"
+  - perguntaTexto: c
     alternativasTexto:
-    - A) Canguru
-    - B) Pinguim
-    - "C) On\xE7a-pintada"
-    - D) Urso polar
+    - 1
+    - 2
+    - 3
+    - 4
     indexCorreto: 2
+  - perguntaTexto: d
+    alternativasTexto:
+    - 1
+    - 2
+    - 3
+    - 4
+    indexCorreto: 3
   index: 0
   cena: 
 --- !u!1 &1998423049
