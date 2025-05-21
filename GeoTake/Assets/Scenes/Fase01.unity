@@ -4412,7 +4412,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &507966265
 Transform:
   m_ObjectHideFlags: 0
@@ -4441,6 +4441,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   game: {fileID: 0}
+  tempoItem: {fileID: 0}
+  inimigo: {fileID: 0}
+  nomeCena: 
 --- !u!1 &516808844
 GameObject:
   m_ObjectHideFlags: 0
@@ -5242,6 +5245,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   game: {fileID: 0}
+  tempoItem: {fileID: 0}
+  inimigo: {fileID: 0}
+  nomeCena: 
 --- !u!1001 &696718038
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7354,6 +7360,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   game: {fileID: 0}
+  tempoItem: {fileID: 0}
+  inimigo: {fileID: 0}
+  nomeCena: 
 --- !u!1 &893554100
 GameObject:
   m_ObjectHideFlags: 0
@@ -19388,6 +19397,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2106332486}
+  - component: {fileID: 2106332488}
+  - component: {fileID: 2106332487}
   m_Layer: 0
   m_Name: Menus
   m_TagString: Untagged
@@ -19415,6 +19426,35 @@ Transform:
   - {fileID: 2021843015}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2106332487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106332485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35c0891fc02f7474783186a1527996ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  facil: {fileID: 695477436}
+  medio: {fileID: 889160975}
+  dificil: {fileID: 507966264}
+--- !u!114 &2106332488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106332485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211ef94ba5679064a85fc8482421911e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player1: {fileID: 0}
+  Player2: {fileID: 0}
 --- !u!1 &2109053711
 GameObject:
   m_ObjectHideFlags: 0

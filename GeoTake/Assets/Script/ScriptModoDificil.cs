@@ -104,4 +104,9 @@ public class ScriptModoDificil : MonoBehaviour
             Debug.Log(item.name + " removido da lista.");
         }
     }
+
+    public void desativarScript()
+    {
+        this.enabled = false;
+    }
 }
