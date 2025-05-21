@@ -21,16 +21,22 @@ public class NewBehaviourScript : MonoBehaviour
         if (contador > 9)
         {
             inimigo2.SetActive(true);
-            
+
         }
         if (contador > 14)
         {
             inimigo3.SetActive(true);
         }
-        if (contador >19)
+        if (contador > 19)
         {
             inimigo4.SetActive(true);
-            this.enabled = false;
+            desativarInimigos();
         }
     }
+    void desativarInimigos()
+    {
+        this.enabled = false;
+    }
 }
+
+
