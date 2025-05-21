@@ -9,15 +9,11 @@ public class perseguir1 : MonoBehaviour
    
     public NavMeshAgent agente; // O NavMeshAgent do inimigo
 
-   
-
-
-void Start()
+    void Start()
     {
       
     }
-
-    void Update()
+    void FixedUpdate()
     {
       if (agente.velocity.sqrMagnitude > 0.1f) // se estiver se movendo
     {
@@ -29,5 +25,8 @@ void Start()
 
 
 
+        agente.SetDestination(jogador1.position);
     }
 }
+    
+
