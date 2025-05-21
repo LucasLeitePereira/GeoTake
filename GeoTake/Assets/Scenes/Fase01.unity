@@ -734,7 +734,7 @@ MonoBehaviour:
   cenaMenu: Tela de Menu
   telaDerrota: {fileID: 2026263677}
   telaVitoria: {fileID: 1654236859}
-  faseAtual: 
+  faseAtual: Fase01
 --- !u!114 &56153818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1306,7 +1306,7 @@ GameObject:
   - component: {fileID: 161644153}
   - component: {fileID: 161644152}
   m_Layer: 5
-  m_Name: "Pr\xF3xima fase"
+  m_Name: Quiz
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1378,7 +1378,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 778833940}
         m_TargetAssemblyTypeName: "Mudan\xE7adeCena, Assembly-CSharp"
-        m_MethodName: Jogar
+        m_MethodName: AbrirQuiz
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5952,14 +5952,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7818bd396a8d6364b8afdbcec5c3a9e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quiz: {fileID: 1051029130}
   CenaJogar: Fase02
   painelOpcoes: {fileID: 1864409156}
   SelectPlayer: {fileID: 0}
   painelMenuInicial: {fileID: 2021843014}
   SelectDificuldade: {fileID: 0}
   CarregarJogo: 
-  TelaPerdeu: {fileID: 0}
-  TelaGanhou: {fileID: 0}
+  TelaPerdeu: {fileID: 2026263677}
+  TelaGanhou: {fileID: 1654236859}
 --- !u!114 &778833941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5972,7 +5973,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c13489bc27a7130419409421e11f3181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numeroJogadores: 0
 --- !u!4 &779790416 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2551574300600872957, guid: 0ce8600790231bb4c9644153907e7d57, type: 3}
@@ -12621,7 +12621,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "PR\xD3XIMA FASE"
+  m_text: QUIZ
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d170e86d8600578479f033153c8ae051, type: 2}
   m_sharedMaterial: {fileID: 1270287484492294991, guid: d170e86d8600578479f033153c8ae051, type: 2}
@@ -13284,15 +13284,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 07f9d148a94fd5745b4b7a277167bcff, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

@@ -3771,12 +3771,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7818bd396a8d6364b8afdbcec5c3a9e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quiz: {fileID: 1760852158}
   CenaJogar: Boss
   painelOpcoes: {fileID: 1350740458}
   SelectPlayer: {fileID: 0}
   painelMenuInicial: {fileID: 0}
   SelectDificuldade: {fileID: 0}
-  CarregarJogo: 
+  CarregarJogo: Fase02
   TelaPerdeu: {fileID: 895704009}
   TelaGanhou: {fileID: 1432735558}
 --- !u!4 &368685505
@@ -3806,7 +3807,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b2740e33c78e264ba442643760ab0f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objetoQuiz: {fileID: 1760852158}
 --- !u!1 &377964853
 GameObject:
   m_ObjectHideFlags: 0
@@ -11590,9 +11590,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 368685506}
-        m_TargetAssemblyTypeName: AtivarQuiz, Assembly-CSharp
-        m_MethodName: AtivaQuiz
+      - m_Target: {fileID: 368685504}
+        m_TargetAssemblyTypeName: "Mudan\xE7adeCena, Assembly-CSharp"
+        m_MethodName: AbrirQuiz
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11601,7 +11601,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 1
+        m_CallState: 2
 --- !u!114 &1258772217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12958,7 +12958,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 133dbebb40952364a8a2584c770ce76c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 07f9d148a94fd5745b4b7a277167bcff, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13512,7 +13512,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1432735559
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16774,7 +16774,7 @@ MonoBehaviour:
   cenaMenu: Tela de Menu
   telaDerrota: {fileID: 895704009}
   telaVitoria: {fileID: 1432735558}
-  faseAtual: 
+  faseAtual: Fase02
 --- !u!4 &1794529174
 Transform:
   m_ObjectHideFlags: 0
