@@ -133,13 +133,16 @@ public class Ataques : MonoBehaviour
         if (opcao1 == true)
         {
 
-
+            imagems[3].SetActive(false);
+            imagems[1].SetActive(false);
             nuvem.SetActive(false);
             obs.SetActive(false);
             opcao1 = false;
         }
         else if (opcao2 == true)
         {
+            imagems[0].SetActive(false);
+            imagems[3].SetActive(false);
             obs2.SetActive(false);
             nuvem.SetActive(false);
             obs.SetActive(false);
@@ -147,6 +150,8 @@ public class Ataques : MonoBehaviour
         }
         else if (opcao3 == true)
         {
+            imagems[0].SetActive(false);
+            imagems[2].SetActive(false);
             obs2.SetActive(false);
             movimentacaoCerta.enabled = true;
             movimentacaoInvertida.enabled = false;
@@ -154,6 +159,8 @@ public class Ataques : MonoBehaviour
         }
         else if (opcao4 == true)
         {
+            imagems[1].SetActive(false);
+            imagems[2].SetActive(false);
             movimentacaoCerta.enabled = true;
             movimentacaoInvertida.enabled = false;
             obs.SetActive(false);
@@ -161,6 +168,8 @@ public class Ataques : MonoBehaviour
         }
         else if (opcao5 == true)
         {
+            imagems[1].SetActive(false);
+            imagems[3].SetActive(false);
             nuvem.SetActive(false);
             obs.SetActive(false);
             opcao5 = false;
