@@ -41,16 +41,10 @@ public class MovimentacaoPlayers : MonoBehaviour
 
             // Suavizar a rotação
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-           
-        }
-        if (Input.GetKeyDown(KeyCode.W))
-        {
             Correr.SetBool("Correr", true);
+
         }
-        else
-        {
-            Correr.SetBool("Correr", false);
-        }
+      
 
     }
 }
