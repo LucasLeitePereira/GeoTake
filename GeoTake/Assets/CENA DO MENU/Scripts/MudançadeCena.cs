@@ -14,6 +14,7 @@ public class MudançadeCena : MonoBehaviour
     [SerializeField] private string CarregarJogo;
     [SerializeField] private GameObject TelaPerdeu;
     [SerializeField] private GameObject TelaGanhou;
+  
 
     string currentScene;
 
