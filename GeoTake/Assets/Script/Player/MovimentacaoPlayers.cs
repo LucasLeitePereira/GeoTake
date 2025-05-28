@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class MovimentacaoPlayers : MonoBehaviour
 {
+
+    public Animator Correr;
     public MudançadeCena cena;
     public float moveSpeed = 5f; // Velocidade de movimento
     public float rotationSpeed = 10f; // Velocidade de rotação
@@ -20,7 +22,7 @@ public class MovimentacaoPlayers : MonoBehaviour
         // Obter entrada do teclado
         float horizontal = Input.GetKey(right) ? 1 : Input.GetKey(left) ? -1 : 0;
         float vertical = Input.GetKey(up) ? 1 : Input.GetKey(down) ? -1 : 0;
-        
+
         float eixoX = transform.position.x;
         float eixoZ = transform.position.z;
         transform.position = new Vector3(eixoX, 0, eixoZ);
@@ -39,6 +41,16 @@ public class MovimentacaoPlayers : MonoBehaviour
 
             // Suavizar a rotação
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+           
         }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            Correr.SetBool("Correr", true);
+        }
+        else
+        {
+            Correr.SetBool("Correr", false);
+        }
+
     }
 }
