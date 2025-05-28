@@ -3150,7 +3150,7 @@ GameObject:
   - component: {fileID: 298465951}
   - component: {fileID: 298465952}
   m_Layer: 0
-  m_Name: Tempo dos itens
+  m_Name: Script modo dificil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3164,12 +3164,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 298465950}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.45888972, y: 0.51914597, z: 0.15223706}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.2053132, y: -6.004423, z: 1.6540205}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 901907636}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &298465952
 MonoBehaviour:
@@ -3751,6 +3751,8 @@ GameObject:
   m_Component:
   - component: {fileID: 368685505}
   - component: {fileID: 368685504}
+  - component: {fileID: 368685506}
+  - component: {fileID: 368685507}
   m_Layer: 0
   m_Name: MenuManeger
   m_TagString: Untagged
@@ -3794,6 +3796,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &368685506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368685503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b2740e33c78e264ba442643760ab0f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &368685507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368685503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 643adb9c505aab241ad94c53cfe81d3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &377964853
 GameObject:
   m_ObjectHideFlags: 0
@@ -6939,72 +6965,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 686179911}
   m_CullTransparentMesh: 1
---- !u!1 &691616501
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 691616502}
-  - component: {fileID: 691616503}
-  - component: {fileID: 691616504}
-  m_Layer: 0
-  m_Name: "M\xE9dio"
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &691616502
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 691616501}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 901907636}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &691616503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 691616501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e72c90a35683b62488c2b5f976ae93b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  game: {fileID: 0}
-  tempoItem: {fileID: 0}
-  inimigo: {fileID: 0}
-  nomeCena: 
---- !u!114 &691616504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 691616501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 460e2c5f078f5074d9b7537e11ec6700, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  contador: 0
-  inimigo1: {fileID: 1969533043}
-  inimigo2: {fileID: 852047672}
-  inimigo3: {fileID: 103415203}
-  inimigo4: {fileID: 1414568183}
 --- !u!1 &703124070
 GameObject:
   m_ObjectHideFlags: 0
@@ -7640,7 +7600,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &800332025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7921,72 +7881,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.27986696, y: 0.25430357, z: 0.19360238}
   m_Center: {x: 0, y: 0.12715182, z: 0.0000000037252903}
---- !u!1 &821838007
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 821838008}
-  - component: {fileID: 821838009}
-  - component: {fileID: 821838010}
-  m_Layer: 0
-  m_Name: "F\xE1cil"
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &821838008
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 821838007}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 901907636}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &821838009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 821838007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efacd142d52c78f47906d81e79534ac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  game: {fileID: 0}
-  tempoItem: {fileID: 0}
-  inimigo: {fileID: 0}
-  nomeCena: 
---- !u!114 &821838010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 821838007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 460e2c5f078f5074d9b7537e11ec6700, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  contador: 0
-  inimigo1: {fileID: 1969533043}
-  inimigo2: {fileID: 852047672}
-  inimigo3: {fileID: 103415203}
-  inimigo4: {fileID: 1414568183}
 --- !u!1001 &849863141
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8716,58 +8610,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 896083916}
   m_CullTransparentMesh: 1
---- !u!1 &901907635
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 901907636}
-  - component: {fileID: 901907637}
-  m_Layer: 0
-  m_Name: Dificuldades
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &901907636
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 901907635}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.7464235, y: -6.523569, z: 1.5017835}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 298465951}
-  - {fileID: 821838008}
-  - {fileID: 691616502}
-  - {fileID: 2080032601}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &901907637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 901907635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35c0891fc02f7474783186a1527996ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  facil: {fileID: 821838007}
-  medio: {fileID: 691616501}
-  dificil: {fileID: 2080032600}
-  tempoItem: {fileID: 298465950}
 --- !u!1 &924795637
 GameObject:
   m_ObjectHideFlags: 0
@@ -16793,8 +16635,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1794529174}
   - component: {fileID: 1794529173}
+  - component: {fileID: 1794529175}
   - component: {fileID: 1794529176}
-  - component: {fileID: 1794529177}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -16836,6 +16678,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1794529175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794529172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 460e2c5f078f5074d9b7537e11ec6700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inimigo1: {fileID: 1969533043}
+  inimigo2: {fileID: 852047672}
+  inimigo3: {fileID: 103415203}
+  inimigo4: {fileID: 1414568183}
 --- !u!114 &1794529176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16896,22 +16754,6 @@ MonoBehaviour:
     indexCorreto: 0
   index: 0
   cena: Boss
---- !u!114 &1794529177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1794529172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35c0891fc02f7474783186a1527996ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  facil: {fileID: 0}
-  medio: {fileID: 0}
-  dificil: {fileID: 0}
-  tempoItem: {fileID: 0}
 --- !u!1001 &1801325756
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19260,72 +19102,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.27986696, y: 0.25430357, z: 0.19360238}
   m_Center: {x: 0, y: 0.12715182, z: 0.0000000037252903}
---- !u!1 &2080032600
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2080032601}
-  - component: {fileID: 2080032602}
-  - component: {fileID: 2080032603}
-  m_Layer: 0
-  m_Name: Dificil
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &2080032601
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2080032600}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 901907636}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2080032602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2080032600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7d4309f1887b1e4aa273dcbb847fda4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  game: {fileID: 0}
-  tempoItem: {fileID: 0}
-  inimigo: {fileID: 0}
-  nomeCena: 
---- !u!114 &2080032603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2080032600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 460e2c5f078f5074d9b7537e11ec6700, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  contador: 0
-  inimigo1: {fileID: 1969533043}
-  inimigo2: {fileID: 852047672}
-  inimigo3: {fileID: 103415203}
-  inimigo4: {fileID: 1414568183}
 --- !u!1001 &2082776784
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20030,7 +19806,7 @@ SceneRoots:
   - {fileID: 379608508}
   - {fileID: 1736122217}
   - {fileID: 1556834665}
+  - {fileID: 298465951}
   - {fileID: 368685505}
   - {fileID: 1794529174}
   - {fileID: 1760852162}
-  - {fileID: 901907636}
