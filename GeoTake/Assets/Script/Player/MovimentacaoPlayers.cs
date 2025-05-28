@@ -25,7 +25,7 @@ public class MovimentacaoPlayers : MonoBehaviour
 
         float eixoX = transform.position.x;
         float eixoZ = transform.position.z;
-        transform.position = new Vector3(eixoX, 1, eixoZ);
+        transform.position = new Vector3(eixoX, 0, eixoZ);
 
         // Normalizar o vetor para evitar movimento mais rápido na diagonal
         Vector3 moveDirection = new Vector3(horizontal, 0f, vertical).normalized;
