@@ -9,8 +9,10 @@ public class SalvarDificuldade : MonoBehaviour
     [SerializeField] private Button BotaoFacil;
     [SerializeField] private Button BotaoMedio;
     [SerializeField] private Button BotaoDificil;
+    
     public bool medio = false;
     public bool dificil = false;
+    public bool player1 = false;
 
     // Chave para PlayerPrefs
     private const string CHAVE_DIFICULDADE = "Dificuldade";
@@ -112,5 +114,13 @@ public class SalvarDificuldade : MonoBehaviour
         int dificuldade = PlayerPrefs.GetInt(CHAVE_DIFICULDADE, 1);
         Debug.Log("CONFIGURAÇÃO OBTIDA: dificuldade configurado para: " + dificuldade);
         return dificuldade;
+    }
+
+    public void Player1()
+    {
+        
+        player1 = true;
+
+        AtualizarInterface();
     }
 }

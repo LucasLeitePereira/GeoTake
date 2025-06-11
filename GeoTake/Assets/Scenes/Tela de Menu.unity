@@ -3272,9 +3272,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2119344981}
-        m_TargetAssemblyTypeName: SalvarQtdJogadores, Assembly-CSharp
-        m_MethodName: SelecionarUmJogador
+      - m_Target: {fileID: 2119344984}
+        m_TargetAssemblyTypeName: SalvarDificuldade, Assembly-CSharp
+        m_MethodName: Player1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5542,6 +5542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7818bd396a8d6364b8afdbcec5c3a9e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quiz: {fileID: 0}
   CenaJogar: SelectPlayer
   painelOpcoes: {fileID: 1961199092}
   SelectPlayer: {fileID: 661551825}
@@ -5565,6 +5566,9 @@ MonoBehaviour:
   BotaoFacil: {fileID: 58207053}
   BotaoMedio: {fileID: 2137634986}
   BotaoDificil: {fileID: 1868796016}
+  medio: 0
+  dificil: 0
+  player1: 0
 --- !u!1 &2137634984
 GameObject:
   m_ObjectHideFlags: 0

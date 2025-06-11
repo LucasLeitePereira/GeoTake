@@ -98,8 +98,9 @@ public class MudançadeCena : MonoBehaviour
 
     public void AbrirQuiz()
     {
-        quiz.SetActive(true);
         TelaGanhou.SetActive(false);
+        quiz.SetActive(true);
+        
 
     }
 
