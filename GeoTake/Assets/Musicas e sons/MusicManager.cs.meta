@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 767082222ddecfb4cbf740966ad8b760
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - musicaMenu: {fileID: 8300000, guid: 0b8b6c03fad40a942bfc9514508bad9c, type: 3}
+  - musicaFase1: {fileID: 8300000, guid: c63f95d53c2ec1c4fafbd870837ca106, type: 3}
+  - musicaBoss: {fileID: 8300000, guid: 5109b7943829fae49b48541b48e45eef, type: 3}
+  - musicaFase2: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
