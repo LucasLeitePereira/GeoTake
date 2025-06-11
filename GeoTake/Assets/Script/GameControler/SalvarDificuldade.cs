@@ -10,7 +10,7 @@ public class SalvarDificuldade : MonoBehaviour
     [SerializeField] private Button BotaoMedio;
     [SerializeField] private Button BotaoDificil;
     
-    public bool medio = false;
+    public bool medio = false; 
     public bool dificil = false;
     public bool player1 = false;
 
