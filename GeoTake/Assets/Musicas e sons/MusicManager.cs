@@ -9,6 +9,12 @@ public class MusicManager : MonoBehaviour
     public AudioClip musicaFase1;
     public AudioClip musicaBoss;
     public AudioClip musicaFase2;
+    public AudioClip somDano;
+    public AudioClip somDerrota;
+    public AudioClip somVitoria;
+
+//tem que criar o codifo la em baixo e criar o if para personagem masc e fem 
+
 
     private AudioSource audioSource;
 
@@ -26,8 +32,27 @@ public class MusicManager : MonoBehaviour
             return;
         }
 
+        if (instancia == null)
+        {
+            instancia = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        // Primeiro AudioSource toca música
+        audioSource = GetComponent<AudioSource>();
+
+        // Cria novo AudioSource só para efeitos
+        audioEfeitos = gameObject.AddComponent<AudioSource>();
+
         audioSource = GetComponent<AudioSource>();
     }
+
+    private AudioSource audioEfeitos;
 
     void OnEnable()
     {
@@ -38,6 +63,19 @@ public class MusicManager : MonoBehaviour
     {
         SceneManager.sceneLoaded -= TrocarMusicaPorCena;
     }
+
+    public void TocarSomDano()
+    {
+        if (somDano != null)
+            audioEfeitos.PlayOneShot(somDano);
+    }
+
+    public void TocarSomDerrota()
+    {
+        if (somDerrota != null)
+            audioEfeitos.PlayOneShot(somDerrota);
+    }
+
 
     void TrocarMusicaPorCena(Scene cena, LoadSceneMode modo)
     {
@@ -57,6 +95,7 @@ public class MusicManager : MonoBehaviour
             case "Fase02":
                 novaMusica = musicaFase2;
                 break;
+  
         }
 
         if (novaMusica != null && audioSource.clip != novaMusica)
