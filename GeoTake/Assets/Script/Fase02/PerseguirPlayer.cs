@@ -5,40 +5,35 @@ using UnityEngine.AI;
 
 public class PerseguirPlayer : MonoBehaviour
 {
-   
-
-    public Transform jogador1; // Refer�ncia ao jogador 1
-    public Transform jogador2; // Refer�ncia ao jogador 2
-    public NavMeshAgent agente; // O NavMeshAgent do inimigo
-
-   
-
-
-void Start()
-    {
-      
-  
-    }
+    public GameObject jogador1; 
+    public GameObject jogador2; 
+    public NavMeshAgent agente; 
 
     void Update()
     {
-        float distanciaJogador1 = Vector3.Distance(transform.position, jogador1.position);
-        float distanciaJogador2 = Vector3.Distance(transform.position, jogador2.position);
-    
-        Transform jogadorMaisProximo;
-        if (distanciaJogador1 < distanciaJogador2)
-         {
-                 jogadorMaisProximo = jogador1;
-    }
-    else
-    {
-        jogadorMaisProximo = jogador2;
-    }
+       
+        if (jogador1.activeSelf && jogador2.activeSelf)
+        {
+            float distanciaJogador1 = Vector3.Distance(transform.position, jogador1.transform.position);
+            float distanciaJogador2 = Vector3.Distance(transform.position, jogador2.transform.position);
 
-    
-    agente.SetDestination(jogadorMaisProximo.position);
+            GameObject jogadorMaisProximo;
 
+            if (distanciaJogador1 < distanciaJogador2)
+            {
+                jogadorMaisProximo = jogador1;
+            }
+            else
+            {
+                jogadorMaisProximo = jogador2;
+            }
 
-
+            agente.SetDestination(jogadorMaisProximo.transform.position);
+        }
+        else if (jogador1.activeSelf  && !jogador2.activeSelf)
+        {
+            agente.SetDestination(jogador1.transform.position);
+        }
+      
     }
 }
