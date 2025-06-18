@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MudançadeCena : MonoBehaviour
 {
+    [SerializeField] private GameObject quiz;
     [SerializeField] private string CenaJogar;
     [SerializeField] private GameObject painelOpcoes;
     [SerializeField] private GameObject SelectPlayer;
@@ -13,6 +14,7 @@ public class MudançadeCena : MonoBehaviour
     [SerializeField] private string CarregarJogo;
     [SerializeField] private GameObject TelaPerdeu;
     [SerializeField] private GameObject TelaGanhou;
+  
 
     string currentScene;
 
@@ -94,6 +96,12 @@ public class MudançadeCena : MonoBehaviour
         SelectPlayer.SetActive(false);
     }
 
+    public void AbrirQuiz()
+    {
+        quiz.SetActive(true);
+        TelaGanhou.SetActive(false);
+
+    }
 
 }
 

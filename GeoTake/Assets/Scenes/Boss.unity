@@ -2286,7 +2286,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 194162309}
         m_TargetAssemblyTypeName: "Mudan\xE7adeCena, Assembly-CSharp"
         m_MethodName: Jogar
         m_Mode: 1
@@ -2346,6 +2346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 194162310}
   - component: {fileID: 194162309}
+  - component: {fileID: 194162311}
   m_Layer: 0
   m_Name: MenuManeger
   m_TagString: Untagged
@@ -2365,12 +2366,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7818bd396a8d6364b8afdbcec5c3a9e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quiz: {fileID: 1033103304}
   CenaJogar: Boss
-  painelMenuInicial: {fileID: 1821262108}
   painelOpcoes: {fileID: 1156580794}
   SelectPlayer: {fileID: 0}
+  painelMenuInicial: {fileID: 1821262108}
   SelectDificuldade: {fileID: 0}
-  Quiz: {fileID: 1033103304}
+  CarregarJogo: Boss
+  TelaPerdeu: {fileID: 1534016287}
+  TelaGanhou: {fileID: 1933882947}
 --- !u!4 &194162310
 Transform:
   m_ObjectHideFlags: 0
@@ -2386,6 +2390,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &194162311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194162308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 643adb9c505aab241ad94c53cfe81d3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &224836641
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4349,7 +4365,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 194162309}
         m_TargetAssemblyTypeName: "Mudan\xE7adeCena, Assembly-CSharp"
         m_MethodName: VoltarParaMenu
         m_Mode: 1
@@ -4632,7 +4648,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 194162309}
         m_TargetAssemblyTypeName: "Mudan\xE7adeCena, Assembly-CSharp"
         m_MethodName: VoltarParaMenu
         m_Mode: 1
@@ -12602,9 +12618,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 194162309}
         m_TargetAssemblyTypeName: "Mudan\xE7adeCena, Assembly-CSharp"
-        m_MethodName: AbrirOpcoes
+        m_MethodName: AbrirOpcoesPerdeu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13468,10 +13484,10 @@ RectTransform:
   - {fileID: 1761728116}
   m_Father: {fileID: 172451886}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 955.35345, y: -368.99686}
+  m_SizeDelta: {x: 400, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &929346839
 MonoBehaviour:
@@ -14695,7 +14711,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1033103305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17585,14 +17601,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.63529414, g: 0.63529414, b: 0.63529414, a: 0}
+  m_Color: {r: 0.63529414, g: 0.63529414, b: 0.63529414, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 133dbebb40952364a8a2584c770ce76c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 07f9d148a94fd5745b4b7a277167bcff, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -18030,10 +18046,10 @@ RectTransform:
   - {fileID: 1895450755}
   m_Father: {fileID: 172451886}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 355.35345, y: -88.99686}
+  m_SizeDelta: {x: 400, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1383419124
 MonoBehaviour:
@@ -19007,7 +19023,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 194162309}
         m_TargetAssemblyTypeName: "Mudan\xE7adeCena, Assembly-CSharp"
         m_MethodName: AbrirOpcoes
         m_Mode: 1
@@ -21363,10 +21379,10 @@ RectTransform:
   - {fileID: 28794641}
   m_Father: {fileID: 172451886}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 355.35345, y: -368.99686}
+  m_SizeDelta: {x: 400, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1691831701
 MonoBehaviour:
@@ -22988,7 +23004,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 194162309}
         m_TargetAssemblyTypeName: "Mudan\xE7adeCena, Assembly-CSharp"
         m_MethodName: AbrirQuiz
         m_Mode: 1
@@ -23758,10 +23774,10 @@ RectTransform:
   - {fileID: 360203556}
   m_Father: {fileID: 172451886}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 955.35345, y: -88.99686}
+  m_SizeDelta: {x: 400, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1838320036
 MonoBehaviour:
@@ -24259,7 +24275,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1890211640
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25097,9 +25113,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1967904975}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 183b5f439058d34459a3f8ed6b7b517e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d4639386815fc64dba79d1f71580f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resultados: {fileID: 1890211639}
   cabecalho: {fileID: 404334703}
   alternativa:
   - {fileID: 1383419124}
@@ -25107,43 +25124,34 @@ MonoBehaviour:
   - {fileID: 1691831701}
   - {fileID: 929346839}
   quantidade:
-  - perguntaTexto: "Qual \xE9 o principal tipo de vegeta\xE7\xE3o da Floresta Amaz\xF4nica?"
+  - perguntaTexto: a
     alternativasTexto:
-    - A) Cerrado
-    - B) Campos limpos
-    - "C) Floresta tropical \xFAmida"
-    - D) Caatinga
-    indexCorreto: 2
-  - perguntaTexto: "Qual dos seguintes rios \xE9 o mais importante da Floresta Amaz\xF4nica?"
-    alternativasTexto:
-    - A) Rio Amazonas
-    - B) Rio Tocantins
-    - "C) Rio S\xE3o Francisco "
-    - "D) Rio Paran\xE1"
+    - 1
+    - 2
+    - 3
+    - 4
     indexCorreto: 0
-  - perguntaTexto: "Qual das alternativas abaixo apresenta uma amea\xE7a \xE0 Floresta
-      Amaz\xF4nica?"
+  - perguntaTexto: b
     alternativasTexto:
-    - "A) Preserva\xE7\xE3o ambiental"
-    - B) Clima equatorial
-    - "C) Turismo sustent\xE1vel"
-    - D) Desmatamento ilegal
-    indexCorreto: 3
-  - perguntaTexto: "Qual das seguintes caracter\xEDsticas \xE9 t\xEDpica do clima
-      da Floresta Amaz\xF4nica?"
-    alternativasTexto:
-    - "A) Esta\xE7\xF5es bem definidas, com inverno seco"
-    - B) Altas temperaturas e chuvas abundantes o ano todo
-    - C) Frio intenso durante o inverno
-    - D) Pouca umidade e chuvas escassas
+    - 1
+    - 2
+    - 3
+    - 4
     indexCorreto: 1
-  - perguntaTexto: "Qual desses animais \xE9 um exemplo da fauna da Floresta Amaz\xF4nica?"
+  - perguntaTexto: c
     alternativasTexto:
-    - A) Canguru
-    - B) Pinguim
-    - "C) On\xE7a-pintada"
-    - D) Urso polar
+    - 1
+    - 2
+    - 3
+    - 4
     indexCorreto: 2
+  - perguntaTexto: d
+    alternativasTexto:
+    - 1
+    - 2
+    - 3
+    - 4
+    indexCorreto: 3
   index: 0
   cena: 
 --- !u!1 &1998423049

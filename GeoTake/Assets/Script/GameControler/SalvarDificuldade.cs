@@ -3,13 +3,25 @@ using UnityEngine.UI;
 
 public class SalvarDificuldade : MonoBehaviour
 {
+    public static SalvarDificuldade sd;
+
+
     [SerializeField] private Button BotaoFacil;
     [SerializeField] private Button BotaoMedio;
     [SerializeField] private Button BotaoDificil;
-
+    public bool medio = false;
+    public bool dificil = false;
 
     // Chave para PlayerPrefs
     private const string CHAVE_DIFICULDADE = "Dificuldade";
+
+    private void Awake()
+    {
+        if(sd == null)
+        {
+            sd = this;
+        }
+    }
 
     void Start()
     {
@@ -55,6 +67,7 @@ public class SalvarDificuldade : MonoBehaviour
 
         // Log de confirmação
         Debug.Log("OPÇÃO SALVA: 1 (facil)");
+       
 
         // Atualizar interface
         AtualizarInterface();
@@ -67,6 +80,7 @@ public class SalvarDificuldade : MonoBehaviour
 
         // Log de confirmação
         Debug.Log("OPÇÃO SALVA: 2 (medio)");
+        medio = true;
 
         // Atualizar interface
         AtualizarInterface();
@@ -79,6 +93,7 @@ public class SalvarDificuldade : MonoBehaviour
 
         // Log de confirmação
         Debug.Log("OPÇÃO SALVA: 3(dificil)");
+        dificil = true;
 
         // Atualizar interface
         AtualizarInterface();
