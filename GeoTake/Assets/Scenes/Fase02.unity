@@ -1645,7 +1645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72b52299b984467488e7650b8b5e7d28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gcPlayer: {fileID: 0}
+  game: {fileID: 0}
 --- !u!114 &126699211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16182,7 +16182,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 368685504}
         m_TargetAssemblyTypeName: "Mudan\xE7adeCena, Assembly-CSharp"
         m_MethodName: ReiniciarLevel
         m_Mode: 1
@@ -19321,7 +19321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72b52299b984467488e7650b8b5e7d28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gcPlayer: {fileID: 0}
+  game: {fileID: 0}
 --- !u!114 &2103004657
 MonoBehaviour:
   m_ObjectHideFlags: 0
