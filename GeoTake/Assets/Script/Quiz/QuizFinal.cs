@@ -30,6 +30,7 @@ public class QuizFinal : MonoBehaviour
             int possibilidade = i;
             alternativa[i].onClick.RemoveAllListeners();
             alternativa[i].onClick.AddListener(() => verificar(possibilidade));
+
         }
     }
     public void verificar(int possibilidade)
@@ -44,17 +45,19 @@ public class QuizFinal : MonoBehaviour
             Debug.Log("Errado");
         }
 
-        ++index;
-        if (index < 4)
+        if (index < 0)
         {
+           
             MostrarQuiz();
+            
         }
+        
         else
         {
             resultados.SetActive(true);
             this.gameObject.SetActive(false);
         }
-
+        
     }
    
 }
