@@ -5,9 +5,6 @@ using UnityEngine;
 
 public class ScriptModoDificil : MonoBehaviour
 {
-    public static ScriptModoDificil tmpItem;
-
-
     public GameObject[] Lista;          // Itens pré-configurados no Inspector
     public float tempoInvisivel = 2f;   // Intervalo entre itens
     public float tempoAtivo = 1f;       // Tempo que o item fica visível
@@ -22,12 +19,6 @@ public class ScriptModoDificil : MonoBehaviour
 
         // Inicia a sequência inicial (todos os itens aparecem e desaparecem)
         StartCoroutine(IniciarJogo());
-
-        if (tmpItem == null)
-        {
-            tmpItem = this;
-        }
-
     }
 
     IEnumerator IniciarJogo()
@@ -103,10 +94,5 @@ public class ScriptModoDificil : MonoBehaviour
             itensDisponiveis.Remove(item);
             Debug.Log(item.name + " removido da lista.");
         }
-    }
-
-    public void desativarScript()
-    {
-        this.enabled = false;
     }
 }

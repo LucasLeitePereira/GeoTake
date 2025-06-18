@@ -38,12 +38,10 @@ public class QuizFinal : MonoBehaviour
         if (possibilidade == p.indexCorreto)
         {
             Debug.Log("CORRETO");
-
         }
         else
         {
             Debug.Log("Errado");
-
         }
 
         ++index;
@@ -54,7 +52,7 @@ public class QuizFinal : MonoBehaviour
         else
         {
             resultados.SetActive(true);
-            gameObject.SetActive(false);
+            this.gameObject.SetActive(false);
         }
 
     }
