@@ -5,8 +5,8 @@ using UnityEngine;
 public class VidaScript : MonoBehaviour
 {
     public static VidaScript vs;
-    
-    public GameController gcPlayer;
+
+    public GameController game;
 
     private Vector3 positionInitial;
 
@@ -16,31 +16,30 @@ public class VidaScript : MonoBehaviour
         {
             vs = this;
         }
-
-        gcPlayer = GameController.gc;
     }
     private void Start()
     {
         positionInitial = transform.position;
+        game = GameController.gc;
     }
 
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Inimigos")
         {
-            if (gcPlayer.vidas >= 0)
+            if (game.vidas >= 0)
             {
-                gcPlayer.vidas--;
+                game.vidas--;
                 Debug.Log("-1 Vida!");
-                Debug.Log("Vidas restantes: " + gcPlayer.vidas);
+                Debug.Log("Vidas restantes: " + game.vidas);
 
-                gcPlayer.vidaText.text = gcPlayer.vidas.ToString(); // Altera a quantidade de vidas na tela
+                game.vidaText.text = game.vidas.ToString(); // Altera a quantidade de vidas na tela
                 transform.position = positionInitial; // Volta o player para o ponto Inicial
 
-                if (gcPlayer.vidas <= 0)
+                if (game.vidas <= 0)
                 {
-                    gcPlayer.vidas = 0;
-                    gcPlayer.alive = false;
+                    game.vidas = 0;
+                    game.alive = false;
                     Debug.Log("Morreu!");
                 } 
             }
