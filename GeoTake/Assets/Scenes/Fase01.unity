@@ -753,34 +753,43 @@ MonoBehaviour:
   - {fileID: 403392817}
   - {fileID: 1480946731}
   - {fileID: 2044684729}
+  - {fileID: 2044684729}
   quantidade:
-  - perguntaTexto: pergunta 1
+  - perguntaTexto: "Qual \xE9 o segundo maior bioma do Brasil em extens\xE3o?"
     alternativasTexto:
-    - 0
-    - 1
-    - 2
-    - 3
-    indexCorreto: 0
-  - perguntaTexto: pergunta 2
-    alternativasTexto:
-    - 0
-    - 1
-    - 2
-    - 3
-    indexCorreto: 1
-  - perguntaTexto: pergunta 3
-    alternativasTexto:
-    - 0
-    - 1
-    - 2
-    - 3
+    - "A) Floresta Amaz\xF4nica"
+    - "B) Mata Atl\xE2ntica"
+    - 'C) Cerrado '
+    - D) Pantanal
     indexCorreto: 2
-  - perguntaTexto: pergutna 4
+  - perguntaTexto: "O Cerrado \xE9 conhecido como:"
     alternativasTexto:
-    - 0
-    - 1
-    - 2
-    - 3
+    - A) A floresta mais densa do Brasil
+    - B) A savana brasileira
+    - C) Um deserto tropical
+    - "D) O bioma mais \xFAmido da Am\xE9rica do Sul"
+    indexCorreto: 1
+  - perguntaTexto: "Qual destas caracter\xEDsticas \xE9 t\xEDpica do Cerrado?"
+    alternativasTexto:
+    - "A) \xC1rvores altas e densamente agrupadas"
+    - "B) Solo extremamente f\xE9rtil e \xFAmido"
+    - "C) Vegeta\xE7\xE3o rasteira com \xE1rvores tortuosas"
+    - D) Pouca biodiversidade
+    indexCorreto: 2
+  - perguntaTexto: "Qual amea\xE7a afeta fortemente o Cerrado atualmente?"
+    alternativasTexto:
+    - A) Terremotos frequentes
+    - "B) Desmatamento causado por urbaniza\xE7\xE3o costeira"
+    - "C) Agricultura e pecu\xE1ria extensivas "
+    - "D) Erup\xE7\xF5es vulc\xE2nicas"
+    indexCorreto: 2
+  - perguntaTexto: "Qual \xE9 a principal esta\xE7\xE3o do ano no Cerrado, caracterizada
+      por longos per\xEDodos de seca?  "
+    alternativasTexto:
+    - "A) Ver\xE3o"
+    - B) Outono
+    - C) Inverno
+    - D) Primavera
     indexCorreto: 3
   index: 0
   cena: fase02
@@ -3216,10 +3225,10 @@ RectTransform:
   - {fileID: 1877989412}
   m_Father: {fileID: 2047946803}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 905.35345, y: -101.49686}
-  m_SizeDelta: {x: 400, y: 200}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &403392817
 MonoBehaviour:
@@ -5999,7 +6008,6 @@ GameObject:
   - component: {fileID: 778833940}
   - component: {fileID: 778833941}
   - component: {fileID: 778833942}
-  - component: {fileID: 778833943}
   m_Layer: 0
   m_Name: MenuManeger
   m_TagString: Untagged
@@ -6056,18 +6064,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &778833942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778833938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 643adb9c505aab241ad94c53cfe81d3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &778833943
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7693,10 +7689,10 @@ RectTransform:
   - {fileID: 2015635057}
   m_Father: {fileID: 2047946803}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 405.35345, y: -101.49686}
-  m_SizeDelta: {x: 400, y: 200}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &926635861
 MonoBehaviour:
@@ -8947,7 +8943,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1051029131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12312,10 +12308,10 @@ RectTransform:
   - {fileID: 1576922012}
   m_Father: {fileID: 2047946803}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 405.35345, y: -356.49686}
-  m_SizeDelta: {x: 400, y: 200}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1480946731
 MonoBehaviour:
@@ -18375,10 +18371,10 @@ RectTransform:
   - {fileID: 1161266583}
   m_Father: {fileID: 2047946803}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 905.35345, y: -356.49686}
-  m_SizeDelta: {x: 400, y: 200}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2044684729
 MonoBehaviour:
