@@ -21,7 +21,7 @@ public class GameController : MonoBehaviour
     public int vidas = 2;
     public bool alive = true;
 
-    private float pontos = 0;
+    // private float pontos = 0;
     float timeTotal;
     private void Awake()
     {
