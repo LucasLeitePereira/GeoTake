@@ -10,17 +10,16 @@ public class MusicManager : MonoBehaviour
     public AudioClip musicaBoss;
     public AudioClip musicaFase2;
     public AudioClip somDano;
+    public AudioClip somDano2;
     public AudioClip somDerrota;
     public AudioClip somVitoria;
 
-//tem que criar o codifo la em baixo e criar o if para personagem masc e fem 
-
-
-    private AudioSource audioSource;
+    private AudioSource audioSource;     // Música de fundo
+    private AudioSource audioEfeitos;    // Efeitos sonoros
 
     void Awake()
     {
-        // Garante que só exista 1 MusicManager na cena
+        // Singleton
         if (instancia == null)
         {
             instancia = this;
@@ -32,27 +31,15 @@ public class MusicManager : MonoBehaviour
             return;
         }
 
-        if (instancia == null)
-        {
-            instancia = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
+        // Criar fontes de som
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.loop = true;
+        audioSource.playOnAwake = false;
 
-        // Primeiro AudioSource toca música
-        audioSource = GetComponent<AudioSource>();
-
-        // Cria novo AudioSource só para efeitos
         audioEfeitos = gameObject.AddComponent<AudioSource>();
-
-        audioSource = GetComponent<AudioSource>();
+        audioEfeitos.loop = false;
+        audioEfeitos.playOnAwake = false;
     }
-
-    private AudioSource audioEfeitos;
 
     void OnEnable()
     {
@@ -64,10 +51,17 @@ public class MusicManager : MonoBehaviour
         SceneManager.sceneLoaded -= TrocarMusicaPorCena;
     }
 
+    // Toca o som de dano específico para o personagem
     public void TocarSomDano()
     {
         if (somDano != null)
             audioEfeitos.PlayOneShot(somDano);
+    }
+
+    public void TocarSomDano2()
+    {
+        if (somDano2 != null)
+            audioEfeitos.PlayOneShot(somDano2);
     }
 
     public void TocarSomDerrota()
@@ -76,7 +70,13 @@ public class MusicManager : MonoBehaviour
             audioEfeitos.PlayOneShot(somDerrota);
     }
 
+    public void TocarSomVitoria()
+    {
+        if (somVitoria != null)
+            audioEfeitos.PlayOneShot(somVitoria);
+    }
 
+    // Trocar a música de fundo de acordo com a cena
     void TrocarMusicaPorCena(Scene cena, LoadSceneMode modo)
     {
         AudioClip novaMusica = null;
@@ -95,13 +95,15 @@ public class MusicManager : MonoBehaviour
             case "Fase02":
                 novaMusica = musicaFase2;
                 break;
-  
+            case "somDano":
+                novaMusica = somDano;
+                break;
         }
 
+        // Troca a música de fundo apenas se for diferente da atual
         if (novaMusica != null && audioSource.clip != novaMusica)
         {
             audioSource.clip = novaMusica;
-            audioSource.loop = true;
             audioSource.Play();
         }
     }

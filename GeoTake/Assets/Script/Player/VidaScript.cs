@@ -17,6 +17,7 @@ public class VidaScript : MonoBehaviour
             vs = this;
         }
     }
+
     private void Start()
     {
         positionInitial = transform.position;
@@ -25,25 +26,45 @@ public class VidaScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "Inimigos")
+        // Verificar se o objeto colidido é um inimigo
+        if (other.gameObject.CompareTag("Inimigos"))
         {
-            if (game.vidas >= 0)
+            // Só realiza a lógica se o jogador tiver vidas restantes
+            if (game.vidas > 0)
             {
+                // Subtrai uma vida
                 game.vidas--;
                 Debug.Log("-1 Vida!");
                 Debug.Log("Vidas restantes: " + game.vidas);
+                MusicManager.instancia.TocarSomDano();
 
-                game.vidaText.text = game.vidas.ToString(); // Altera a quantidade de vidas na tela
-                transform.position = positionInitial; // Volta o player para o ponto Inicial
+                // Atualiza o texto na tela
+                game.vidaText.text = game.vidas.ToString();
 
+                // Reinicia a posição do jogador
+                transform.position = positionInitial;
+
+                // Verifica se as vidas acabaram
                 if (game.vidas <= 0)
                 {
                     game.vidas = 0;
                     game.alive = false;
                     Debug.Log("Morreu!");
-                } 
+                    
+
+                    // Aqui você pode chamar um método de Game Over ou reiniciar a cena
+                    // Exemplo: GameOver();
+                }
             }
         }
     }
 
+    // Método para reiniciar o personagem caso precise em outro lugar do código
+    public void ReiniciarVida()
+    {
+        // Reinicia o número de vidas, o estado do jogador, etc.
+        game.vidas = 3; // Exemplo, dependendo do seu sistema de vidas
+        game.alive = true;
+        transform.position = positionInitial; // Reinicia a posição
+    }
 }
