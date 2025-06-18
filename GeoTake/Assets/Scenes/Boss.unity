@@ -17682,7 +17682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72b52299b984467488e7650b8b5e7d28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gcPlayer: {fileID: 0}
+  game: {fileID: 0}
 --- !u!114 &1360650606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25149,6 +25149,13 @@ MonoBehaviour:
     - 4
     indexCorreto: 2
   - perguntaTexto: d
+    alternativasTexto:
+    - 1
+    - 2
+    - 3
+    - 4
+    indexCorreto: 3
+  - perguntaTexto: e
     alternativasTexto:
     - 1
     - 2
