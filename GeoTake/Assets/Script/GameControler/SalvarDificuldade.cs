@@ -5,7 +5,7 @@ public class SalvarDificuldade : MonoBehaviour
 {
     public static SalvarDificuldade sd;
 
-
+    [SerializeField] private GameObject player;
     [SerializeField] private Button BotaoFacil;
     [SerializeField] private Button BotaoMedio;
     [SerializeField] private Button BotaoDificil;
@@ -27,16 +27,7 @@ public class SalvarDificuldade : MonoBehaviour
 
     void Start()
     {
-        // Adicionar listeners aos botões existentes
-        if (BotaoFacil != null)
-        {
-            BotaoFacil.onClick.AddListener(DificuldadeFacil);
-            Debug.Log("Botão de dificuldade facil acionado");
-        }
-        else
-        {
-            Debug.LogError("ERRO: Botão dificuldade facil não foi atribuído no Inspector!");
-        }
+        
 
         if (BotaoMedio != null)
         {
@@ -58,56 +49,42 @@ public class SalvarDificuldade : MonoBehaviour
             Debug.LogError("ERRO: Botão de dificuldade dificil não foi atribuído no Inspector!");
         }
 
-        // Carregar e mostrar a opção salva anteriormente
-        AtualizarInterface();
+   
     }
 
     public void DificuldadeFacil()
     {
-        // Salvar a escolha
-        PlayerPrefs.SetInt(CHAVE_DIFICULDADE, 1);
 
-        // Log de confirmação
-        Debug.Log("OPÇÃO SALVA: 1 (facil)");
+        
+      
        
-
-        // Atualizar interface
-        AtualizarInterface();
+ 
     }
-
     public void DificuldadeMedio()
     {
-        // Salvar a escolha
-        PlayerPrefs.SetInt(CHAVE_DIFICULDADE, 2);
 
+        medio = true;
         // Log de confirmação
         Debug.Log("OPÇÃO SALVA: 2 (medio)");
         medio = true;
 
-        // Atualizar interface
-        AtualizarInterface();
+      
     }
 
     public void DificuldadeDificil()
     {
         // Salvar a escolha
-        PlayerPrefs.SetInt(CHAVE_DIFICULDADE, 3);
+        dificil = true;
 
         // Log de confirmação
         Debug.Log("OPÇÃO SALVA: 3(dificil)");
         dificil = true;
 
         // Atualizar interface
-        AtualizarInterface();
+        
     }
 
-    private void AtualizarInterface()
-    {
-        int dificuldadeSetada = PlayerPrefs.GetInt(CHAVE_DIFICULDADE, 1);
-
-        Debug.Log("OPÇÃO CARREGADA: dificuldade configurado para: " + dificuldadeSetada);
-
-    }
+    
 
     public static int ObterDificuldade()
     {
@@ -121,6 +98,5 @@ public class SalvarDificuldade : MonoBehaviour
         
         player1 = true;
 
-        AtualizarInterface();
     }
 }
