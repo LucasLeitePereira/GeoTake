@@ -19,10 +19,11 @@ public class QuizFinal : MonoBehaviour
     private Color corOriginal;
     private int acertos = 0;
 
+    
     void Start()
     {
+
         index = 0;
-        acertos = 0;
         corOriginal = alternativa[0].GetComponent<Image>().color;
         botaoProxima.gameObject.SetActive(false);
         MostrarQuiz();

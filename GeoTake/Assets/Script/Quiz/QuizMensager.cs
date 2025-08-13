@@ -3,9 +3,12 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 public class QuizMensager : MonoBehaviour
 {
+
+
     public TMP_Text cabecalho;
     public Button[] alternativa;
     public Quiz[] quantidade;
@@ -13,15 +16,18 @@ public class QuizMensager : MonoBehaviour
     public GameObject painelFinal;
     public TMP_Text textoResultado;
     public int index = 0;
+    public static int acertosTotais = 0;
     public string cena;
 
     private Color corOriginal;
-    private int acertos = 0;
+    public int acertos = 0;
 
+
+    
     void Start()
     {
         index = 0;
-        acertos = 0;
+       
         corOriginal = alternativa[0].GetComponent<Image>().color;
         botaoProxima.gameObject.SetActive(false);
         MostrarQuiz();
@@ -65,9 +71,12 @@ public class QuizMensager : MonoBehaviour
             else
                 img.color = Color.red;
         }
-
         if (possibilidade == p.indexCorreto)
+        {
             acertos++;
+            acertosTotais++;
+        }
+
 
         botaoProxima.gameObject.SetActive(true);
     }
@@ -77,17 +86,19 @@ public class QuizMensager : MonoBehaviour
         index++;
         if (index < quantidade.Length)
         {
+           
             MostrarQuiz();
         }
         else
         {
             SceneManager.LoadScene(cena);
+            MostrarResultadoFinal();
         }
     }
 
     void MostrarResultadoFinal()
     {
         painelFinal.SetActive(true);
-        textoResultado.text = $"Você acertou {acertos} de {quantidade.Length} perguntas!";
+        textoResultado.text = $"Você acertou {acertosTotais} de 15 perguntas!";
     }
 }
