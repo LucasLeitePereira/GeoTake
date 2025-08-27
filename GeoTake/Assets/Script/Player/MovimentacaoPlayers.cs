@@ -44,7 +44,12 @@ public class MovimentacaoPlayers : MonoBehaviour
             Correr.SetBool("Correr", true);
 
         }
-      
+        else
+        {
+            // Parar animação quando não está se movendo
+            Correr.SetBool("Correr", false);
+        }
+
 
     }
 }

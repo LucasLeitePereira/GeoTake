@@ -91,6 +91,7 @@ public class QuizMensager : MonoBehaviour
         }
         else
         {
+            botaoProxima.gameObject.SetActive(false);
             SceneManager.LoadScene(cena);
             MostrarResultadoFinal();
         }
