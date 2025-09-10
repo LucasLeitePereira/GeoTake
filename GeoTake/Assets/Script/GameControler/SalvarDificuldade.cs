@@ -21,8 +21,8 @@ public class SalvarDificuldade : MonoBehaviour
         if(sd == null)
         {
             sd = this;
-        }
-    }
+     }
+    }   
 
 
     public void DificuldadeMedio()

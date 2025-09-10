@@ -15,7 +15,6 @@ public class Ataques : MonoBehaviour
     private int random = 0;
     public MonoBehaviour movimentacaoCerta;
     public MonoBehaviour movimentacaoInvertida;
-    public GameObject[] imagems;
 
 
     private bool rodando = false;
@@ -82,8 +81,6 @@ public class Ataques : MonoBehaviour
     {
         obs.SetActive(true);
         nuvem.SetActive(true);
-        imagems[3].SetActive(true);
-        imagems[1].SetActive(true);
         opcao1 = true;
         random = 0;
     }
@@ -91,8 +88,6 @@ public class Ataques : MonoBehaviour
     {
         nuvem.SetActive(true);
         obs2.SetActive(true);
-        imagems[0].SetActive(true);
-        imagems[3].SetActive(true);
         obs.SetActive(true);
         opcao2 = true;
         random = 0;
@@ -100,29 +95,18 @@ public class Ataques : MonoBehaviour
     public void Opcao3()
     {
         obs2.SetActive(true);
-        imagems[0].SetActive(true);
-        imagems[2].SetActive(true);
-        movimentacaoCerta.enabled = false;
-        movimentacaoInvertida.enabled = true;
         opcao3 = true;
         random = 0;
     }
     public void Opcao4()
     {
         obs.SetActive(true);
-        imagems[1].SetActive(true);
-        imagems[2].SetActive(true);
-        movimentacaoCerta.enabled = false;
-        movimentacaoInvertida.enabled = true;
         opcao4 = true;
         random = 0;
     }
     public void Opcao5()
     {
-        obs.SetActive(true);
         nuvem.SetActive(true);
-        imagems[1].SetActive(true);
-        imagems[3].SetActive(true);
         opcao5 = true;
         random = 0;
     }
@@ -132,17 +116,12 @@ public class Ataques : MonoBehaviour
 
         if (opcao1 == true)
         {
-
-            imagems[3].SetActive(false);
-            imagems[1].SetActive(false);
             nuvem.SetActive(false);
             obs.SetActive(false);
             opcao1 = false;
         }
         else if (opcao2 == true)
         {
-            imagems[0].SetActive(false);
-            imagems[3].SetActive(false);
             obs2.SetActive(false);
             nuvem.SetActive(false);
             obs.SetActive(false);
@@ -150,28 +129,17 @@ public class Ataques : MonoBehaviour
         }
         else if (opcao3 == true)
         {
-            imagems[0].SetActive(false);
-            imagems[2].SetActive(false);
             obs2.SetActive(false);
-            movimentacaoCerta.enabled = true;
-            movimentacaoInvertida.enabled = false;
             opcao3 = false;
         }
         else if (opcao4 == true)
         {
-            imagems[1].SetActive(false);
-            imagems[2].SetActive(false);
-            movimentacaoCerta.enabled = true;
-            movimentacaoInvertida.enabled = false;
             obs.SetActive(false);
             opcao4 = false;
         }
         else if (opcao5 == true)
         {
-            imagems[1].SetActive(false);
-            imagems[3].SetActive(false);
             nuvem.SetActive(false);
-            obs.SetActive(false);
             opcao5 = false;
         }
 

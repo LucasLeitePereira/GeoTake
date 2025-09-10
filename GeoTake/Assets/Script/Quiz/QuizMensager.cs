@@ -4,11 +4,12 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEditor;
+using Unity.VisualScripting;
 
 public class QuizMensager : MonoBehaviour
 {
 
-
+    public static QuizMensager Instance;
     public TMP_Text cabecalho;
     public Button[] alternativa;
     public Quiz[] quantidade;
@@ -23,7 +24,16 @@ public class QuizMensager : MonoBehaviour
     public int acertos = 0;
 
 
-    
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+    }
+
+
+
     void Start()
     {
         index = 0;
