@@ -9,6 +9,7 @@ TagManager:
   - Inimigos
   - obs
   - Ataque1
+  - WhiteBall
   layers:
   - Default
   - TransparentFX
